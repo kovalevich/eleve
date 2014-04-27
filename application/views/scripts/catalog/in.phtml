@@ -1,0 +1,27 @@
+<div class="content_box>
+	<h1>Catalog:</h1>
+	<div class="one_model">
+		<h2><?= strtoupper($this->user->name) ?></h2>	
+		<div class="model_data">
+		</div>
+		<div class="model_img">
+			<div class="model_img_left">
+				<?= $this->photo($this->user->getPhoto(0), 1, true) ?>				
+			</div>
+			<ul class="list_model_img">
+				<li>
+					<?= $this->photo($this->user->getPhoto(0), 3, true) ?>	
+				</li>	
+				<li>
+					<?= $this->photo($this->user->getPhoto(0), 3, true) ?>	
+				</li>	
+				<li>
+					<?= $this->photo($this->user->getPhoto(0), 3, true) ?>	
+				</li>	
+				<li>
+					<?= $this->photo($this->user->getPhoto(0), 3, true) ?>	
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

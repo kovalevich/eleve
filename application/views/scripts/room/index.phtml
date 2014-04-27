@@ -1,0 +1,42 @@
+<div class="main-wrapp">
+    <div class="content">
+        <div class="articles">
+        	
+        	<div class="user-cabinet">
+            	<h1>Личный кабинет</h1>
+            	<ul class="menu">
+                	<?php echo $this->user_menu ?>
+            	</ul>
+                
+                <table><tbody>
+                	<tr>
+                	    <td>Ваше имя:</td><td><?php echo $this->escape($this->user->name) ?></td> 
+                	</tr>
+                    <tr>
+                        <td>Почтовый ящик</td><td><?php echo $this->escape($this->user->email) ?></td>
+                    </tr>
+                    <tr>
+                        <td>Город</td><td><?php echo $this->escape($this->user->city) ?></td>
+                    </tr>
+                    <tr>
+                        <td>Телефон</td><td><?php echo $this->escape($this->user->phone) ?></td>
+                    </tr>
+                    <?php if ($this->user->role == 'author') : ?>
+                    <tr>
+                        <td>Предметы</td>
+                        <td>        
+                            <?php foreach ($this->user_themes as $theme) {
+                                echo "{$theme->title}, ";
+                            }
+                            ?>
+                            <a href="<?php echo $this->url(array('action'=>'editthemes'))?>" title="<?php echo $this->translate('add themes')?>"><?php echo $this->translate('add themes')?></a>
+                        </td>
+                    </tr>
+                    <?php endif; ?>
+                </tbody></table>
+            </div>
+            <!-- /.user-cabinet -->
+            
+        </div>
+    </div>
+</div>

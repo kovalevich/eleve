@@ -1,0 +1,30 @@
+<div class="main-wrapp">
+    <div class="content">
+        <div class="articles">
+        	<!-- Любой новый код вставляем в <div class="articles">   </div> -->
+        	<div class="user-cabinet">
+            	<h1>Личный кабинет</h1>
+            	<ul class="menu">
+                	<?php echo $this->user_menu ?>
+            	</ul>
+                
+                <div class="payment">
+                	<h2><?php echo $this->title ?></h2>
+                    <div class="info">
+                    	<?php echo $this->info ?>
+                    </div>
+                    
+                    <ul class="pay-way">
+                    	<li><a href="/payment/bank/type/<?php echo $this->type ?>/id/<?php echo $this->id ?>" target="_blank"> <img src="/images/pay_nal.jpg" /> <span>Наличными в банке</span></a></li>
+                        <li><a href="#"> <img src="/images/pay_webmoney.jpg" /> <span>WebMoney</span></a></li>
+                        <li><a href="/payment/webpay/type/<?php echo $this->type ?>/id/<?php echo $this->id ?>"> <img src="/images/pay_creditcard.jpg" /> <span>VISA/MasterCard</span></a></li>
+                        <li><a href="#"> <img src="/images/pay_erip.jpg" /> <span>ЕРИП</span></a></li>
+                    </ul>
+                </div>
+				
+            </div>
+            <!-- /.user-cabinet -->
+            
+        </div>
+    </div>
+</div>

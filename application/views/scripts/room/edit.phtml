@@ -1,0 +1,69 @@
+<label>Фотографии:</label>
+<div id="photos">
+    <div class="load_photo_box">
+        <div class="load_photo">
+            <div class="load_text"></div>
+            <label  class="btn_brouse">
+                <span>Обзор</span>
+                <input type="file" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value" name="photos[]"/>
+            </label>
+        </div>
+    </div>
+
+    <div class="load_photo_box">
+        <div class="load_photo">
+            <div class="load_text"></div>
+            <label  class="btn_brouse">
+                <span>Обзор</span>
+                <input type="file" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value"  name="photos[]"/>
+            </label>
+        </div>
+    </div>
+
+    <div class="load_photo_box">
+        <div class="load_photo">
+            <div class="load_text"></div>
+            <label  class="btn_brouse">
+                <span>Обзор</span>
+                <input type="file" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value " name="photos[]"/>
+            </label>
+        </div>
+    </div>
+
+    <div style="display: none" id="hide">
+        <div class="load_photo_box">
+            <div class="load_photo">
+                <div class="load_text"></div>
+                <label  class="btn_brouse">
+                    <span>Обзор</span>
+                    <input type="file" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value " name="photos[]"/>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<span class="add_photo">+ <a onclick="$('#photos').html($('#photos').html() + $('#hide').html())">добавить фото</a></span>
+
+
+<div class="main-wrapp">
+    <div class="content">
+        <div class="articles">
+        	
+        	<div class="user-cabinet">
+            	<h1>Личный кабинет</h1>
+            	<ul class="menu">
+                	<?php echo $this->user_menu ?>
+            	</ul>
+            	<h2>Редактирование личных данных</h2>
+                <?php echo $this->form ?>
+                
+            </div>
+            <!-- /.user-cabinet -->
+            
+        </div>
+    </div>
+			<script type="text/javascript">
+				$("#phone").mask("999 (99) 999-99-99");
+            </script>
+</div>

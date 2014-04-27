@@ -1,0 +1,35 @@
+<div class="main-wrapp">
+    <div class="content">
+        <div class="articles">
+        	
+        	<div class="user-cabinet">
+            	<h1>Личный кабинет</h1>
+            	<ul class="menu">
+                	<?php echo $this->user_menu ?>
+            	</ul>
+            	<div style="float: left; width: 60%;">
+                	<h2><?php echo $this->escape($this->order->title) ?></h2>
+                	<?php echo $this->order($this->order) ?>
+            	</div>
+            	<div style="float: right; width: 38%;">
+                	<h2>События</h2>
+                   	<table>
+            			<tbody>
+                
+                        <?php if (count($this->events)):?>
+                            <?php 
+                            foreach ($this->events as $event) {
+                                echo "<tr><td style=\"width: 120px; font-size: 0.8em;\">{$this->nicetime($event->created)}</td> <td>{$this->translate('code' . $event->code)}</td></tr>";    
+                            }
+                            ?>
+                        <?php endif;?>
+                        </tbody>
+                    </table>
+            	    <p class="notice"><?php echo $this->message ?></p>
+            	    <p class="errors"><?php echo $this->event_errors ?></p>
+            	    <?php echo $this->action ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

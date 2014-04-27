@@ -1,0 +1,25 @@
+<div class="main-wrapp">
+    <div class="content">
+        <div class="articles">
+        	
+        	<div class="user-cabinet">
+            	<h1>Личный кабинет</h1>
+            	<ul class="menu">
+                	<?php echo $this->user_menu ?>
+            	</ul>
+            	<div style="float: left; width: 60%;">
+                	<h2>Текщий счет</h2>
+                	<?php echo $this->accounts($this->currentAccount, true) ?>
+                	<br><br>
+                	<h3>Статистика за весь период</h3>
+                	<?php echo $this->accountsstat ($this->user->id) ?>
+            	</div>
+            	<div style="float: left; width: 40%;">
+                	<h2>Доступные счета</h2>
+                   	<?php echo $this->accounts($this->entries) ?>
+            	    <p style="font-style: italic; font-size: 0.8em; margin-top: 20px;">* Напоминаем, что счета, которые не обналичены в течение 6 месяцев автоматически аннулируются!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

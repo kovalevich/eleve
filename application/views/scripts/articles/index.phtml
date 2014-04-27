@@ -1,0 +1,16 @@
+<?php 
+    $this->headTitle($this->article->meta_title, 'PREPEND');
+    $this->headMeta($this->article->meta_description, 'description');
+    $this->headMeta($this->article->meta_keywords, 'keywords');
+?>
+<div class="content_box">
+    <h1><?php echo $this->article->category->title?>:</h1>
+
+    <div class="one_news">
+        <h2><?php echo $this->article->title?></h2>
+        <span class="date"><?php echo $this->nicetime($this->article->created) ?></span>
+        <?php echo $this->articletext($this->article->text) ?>
+        <span class="back"><a href="<?php echo $this->url(array('id'=>$this->article->category->id), 'category')?>">вернуться</a></span>
+    </div>
+
+</div>

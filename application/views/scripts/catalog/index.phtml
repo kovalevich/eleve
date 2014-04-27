@@ -1,0 +1,81 @@
+<div class="content_box">
+    <h1>Catalog:</h1>
+
+    <form method="get">
+        <div class="form_separate">
+            <div class="form_separate_box">
+                <div class="form_separate_left">
+                    <div class="form_separate_main">
+                        <label>Город:</label>
+                        <div class="sell" style="width: 150px;">
+                            <select class="styled" name="city">
+                                <option>Vilnus</option>
+                                <option>Vilnus2</option>
+                                <option>Vilnus3</option>
+                                <option>Vilnus4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_separate_main">
+                        <label>Цели:</label>
+                        <div class="sell" style="width: 150px;">
+                            <select class="styled" name="targets">
+                                <option>Съемки в рекламе</option>
+                                <option>Съемки в рекламе1</option>
+                                <option>Съемки в рекламе2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_separate_main">
+                        <label>Статус:</label>
+                        <div class="sell" style="width: 150px;">
+                            <select class="styled" name="status">
+                                <option>Фотодель подиума</option>
+                                <option>Фотодель подиума2</option>
+                                <option>Фотодель подиума3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_separate_right">
+                    <div class="form_separate_main">
+                        <label>Возраст:</label>
+                        <div class="sell">
+                            <select class="styled" name="brit">
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_separate_main">
+                        <label>Рост:</label>
+                        <div class="sell">
+                            <select class="styled" name="growth">
+                                <option value="1">170-180</option>
+                                <option value="2">180-190</option>
+                                <option value="3">190-195</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_separate_main">
+                        <label>Пол:</label>
+                        <div class="sell">
+                            <select class="styled" name="male">
+                                <option value="woman">Женский</option>
+                                <option value="man">Мужской</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input class="btn_separate" type="submit" value="Поиск">
+        </div>
+    </form>
+
+    <ul class="catalog_separate">
+        <?= $this->catalogpage($this->profiles)?>
+    </ul>
+
+</div>

@@ -1,0 +1,347 @@
+<div class="content_box">
+    <h1>Profile:</h1>
+    <form method="post" enctype="<?= $this->form->getEnctype() ?>">
+        <div class="form_page">
+            <p>В нашем магазине Вы всегда сможете поднять себе настроение: яркая,
+            оригинальная и удобная одежда, в которой легко соответствовать любой
+            ситуации, представлена в Eleve круглый год. При этом обновление
+            ассортимента происходит постоянно, практически каждую неделю
+            в магазине.</p>
+            <div class="form_page_data">
+                <table>
+                    <tr>
+                        <td><label>Представьтесь, пожалуйста:</label></td>
+                        <td><input class="tx" type="text" name="name" value="<?php echo $this->form->name->getValue() ?>"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Дата рождения:</label></td>
+                        <td><input class="tx" type="text" name="date_brit" value="<?php echo $this->form->date_brit->getValue() ?>"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Серия и номер паспорта:</label></td>
+                        <td><input class="tx" type="text" name="passport" value="<?php echo $this->form->passport->getValue() ?>"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Кем и когда выдан:</label></td>
+                        <td><input class="tx" type="text" name="date_passport" value="<?php echo $this->form->date_passport->getValue() ?>"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Фактическое место <br> жительства (адрес):</label></td>
+                        <td><textarea rows="5" name="address" cols="5"><?php echo $this->form->address->getValue() ?></textarea></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Номер телефона:</label></td>
+                        <td><input class="tx" type="text" name="phone" value="<?php echo $this->form->phone->getValue() ?>"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Адрес e-mail:</label></td>
+                        <td><input class="tx" type="text" name="email" value="<?php echo $this->form->email->getValue() ?>"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Рост (без каблуков):</label></td>
+                        <td><input class="tx" type="text" name="growth" value="<?php echo $this->form->growth->getValue() ?>"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Объемы фигуры: </label></td>
+                        <td><input class="tx" type="text" name="volumes" value="<?php echo $this->form->volumes->getValue() ?>"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Размер обуви:</label></td>
+                        <td><input class="tx" type="text" name="volumes_shoes" value="<?php echo $this->form->volumes_shoes->getValue() ?>"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Образование:</label></td>
+                        <td><input class="tx" type="text" name="education" value="<?php echo $this->form->education->getValue() ?>"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="form_page_lang">
+                <label>Знание иностранных языков:</label>
+                <div class="form_lang">
+                    <label>Язык</label>
+                    <input class="tx" type="text" value="">
+                </div>
+                <div class="form_lang">
+                    <label>Уровень владения</label>
+                    <div class="sell"  style="width: 168px;">
+                        <select class="styled" name="l1">
+                            <option>средний</option>
+                            <option>средний1</option>
+                            <option>средний2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_lang">
+                    <label>Язык</label>
+                    <input class="tx" type="text" value="">
+                </div>
+                <div class="form_lang">
+                    <label>Уровень владения</label>
+                    <div class="sell" style="width: 168px;">
+                        <select class="styled" name="l2">
+                            <option>средний</option>
+                            <option>средний1</option>
+                            <option>средний2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_check">
+                <label>Ваши цели:</label>
+                <div class="form_check_box">
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Мастер-классы</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Промо-акции</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Съемки для катологов</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Съемки в киносериалах</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Съемки в рекламе</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Вокальные, танцевальные
+                            или другие проекты</label>
+                    </div>
+                </div>
+
+
+                <div class="form_check_box">
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Fashion показы, defile</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Презентации и выставки</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Съемки для журналов</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Съемки в клипах</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Работа переводчиком</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <label>Профессиональный статус:</label>
+            <div class="form_check">
+
+                <div class="form_check_box">
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Профессиональный актер</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Начинающий актер</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Телеведущий, радиоведущий</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Артист эстрады</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Фотомодель, модель подиума</label>
+                    </div>
+                </div>
+
+                <div class="form_check_box">
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Конферансье</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Каскадер</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Танцовщик / Танцовщица</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Начинающий</label>
+                    </div>
+                    <div class="chbox">
+                        <input type="checkbox" class="styled" checked>
+                        <label>Переводчик</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="txar_box">
+                <label>Опыт работы на выставках,
+                    презентациях, съемках и
+                    т.д. (укажите наиболее
+                    интересные проекты):</label>
+                <textarea rows="5" cols="5"></textarea>
+            </div>
+            <div class="txar_box">
+                <label>Укажите в данном пункте
+                    ваш стиль танцев (для
+                    танцовщиц):</label>
+                <textarea rows="5" cols="5"></textarea>
+            </div>
+            <div class="txar_box">
+                <label>Личные качества,
+                    выделяющие вас:</label>
+                <textarea rows="5" cols="5"></textarea>
+            </div>
+
+            <label>Фотографии:</label>
+            <ul class="form_photo">
+                <?php
+                    if($this->profile->photos) {
+                        foreach ($this->profile->photos as $photo) {
+                            echo '
+                                <li id="photo' . $photo->id . '">
+                                    ' . $this->photo($photo, 3) . '
+                                    <a href="#" onclick="deleteImage(' . $photo->id . ', \'photo' . $photo->id . '\'); return false;" class="delete">Удалить</a>
+                                </li>
+                            ';
+                        }
+                    }
+                ?>
+            </ul>
+
+            <div id="images">
+                <input name="MAX_FILE_SIZE" value="8388608" id="MAX_FILE_SIZE" type="hidden">
+                <div class="load_photo_box" id="file-1" style="display: none;">
+                    <div class="load_photo">
+                        <div class="load_text"></div>
+                        <label  class="btn_brouse">
+                            <span>Обзор</span>
+                            <input type="file" name="images[]" id="images-0" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="load_photo_box" id="file-2" style="display: none;">
+                    <div class="load_photo">
+                        <div class="load_text"></div>
+                        <label  class="btn_brouse">
+                            <span>Обзор</span>
+                            <input type="file" name="images[]" id="images-1" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="load_photo_box" id="file-3" style="display: none;">
+                    <div class="load_photo">
+                        <div class="load_text"></div>
+                        <label  class="btn_brouse">
+                            <span>Обзор</span>
+                            <input type="file" name="images[]" id="images-2" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="load_photo_box" id="file-4" style="display: none;">
+                    <div class="load_photo">
+                        <div class="load_text"></div>
+                        <label  class="btn_brouse">
+                            <span>Обзор</span>
+                            <input type="file" name="images[]" id="images-3" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="load_photo_box" id="file-5" style="display: none;">
+                    <div class="load_photo">
+                        <div class="load_text"></div>
+                        <label  class="btn_brouse">
+                            <span>Обзор</span>
+                            <input type="file" name="images[]" id="images-4" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="load_photo_box" id="file-6" style="display: none;">
+                    <div class="load_photo">
+                        <div class="load_text"></div>
+                        <label  class="btn_brouse">
+                            <span>Обзор</span>
+                            <input type="file" name="images[]" id="images-5" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="load_photo_box" id="file-7" style="display: none;">
+                    <div class="load_photo">
+                        <div class="load_text"></div>
+                        <label  class="btn_brouse">
+                            <span>Обзор</span>
+                            <input type="file" name="images[]" id="images-6" onchange="this.parentNode.previousSibling.previousSibling.innerHTML = this.value"/>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <span class="add_photo">+ <a href="#" onclick="addFileform(); return false;">добавить фото</a></span>
+
+
+            <div class="form_page_pass">
+                <label>Изменить пароль:</label>
+                <table>
+                    <tr>
+                        <td><label>Текущий пароль:</label></td>
+                        <td><input class="tx tx11" type="password" value=""></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Новый пароль:</label></td>
+                        <td><input class="tx tx11" type="password" value=""></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label>Повторите пароль:</label></td>
+                        <td><input class="tx tx11" type="password" value=""></td>
+                    </tr>
+                </table>
+            </div>
+            <input class="btn_save" type="submit" value="Сохранить">
+
+        </div>
+    </form>
+</div>

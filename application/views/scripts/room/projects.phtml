@@ -1,0 +1,26 @@
+<div class="main-wrapp">
+    <div class="content">
+        <div class="articles">
+        	
+        	<div class="user-cabinet">
+            	<h1>Личный кабинет</h1>
+            	<ul class="menu">
+                	<?php echo $this->user_menu ?>
+            	</ul>
+            	<h2>Мои работы в каталоге</h2>
+                
+            </div>
+            <!-- /.user-cabinet -->
+            <div class="table">
+                <?php echo $this->projectstable($this->entries, 1) ?>
+            </div>
+            
+            <?php if (isset($this->message)) :?>
+            <p><?php echo $this->message ?></p>
+            <?php else :?>
+            <p><a href="/catalog/add">Загрузить работу для продажи</a></p>
+            <?php endif;?>
+            
+        </div>
+    </div>
+</div>
