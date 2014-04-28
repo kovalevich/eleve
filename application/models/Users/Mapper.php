@@ -61,7 +61,7 @@ class Models_Users_Mapper extends Models_Mapper
         return $paginator;
     }
     
-    public function convertRow($row, $is_files = false)
+    public function convertRow($row = null)
     {
     	$entry = parent::convertRow($row);
     	return $entry;

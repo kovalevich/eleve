@@ -93,13 +93,16 @@ class Models_Mapper
     	return isset($this->_row->$name) ? $this->_row->$name : null;
     }
     
-    public function convertRow($row)
+    public function convertRow($row = null)
     {
-        if (!$row) return null;
+        if (!$row && !$this->_row) return null;
+
+        if(!$row) $row = $this->getArray();
 
         $className = 'Models_' . $this->_name . '_Model';
         return new $className($row);
     }
+
 }
 
 ?>

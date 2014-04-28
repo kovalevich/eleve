@@ -62,6 +62,22 @@ class Application_Form_Profile extends Application_Form_Form
             ->setAttrib('id', 'phone')
             ->addValidator('NotEmpty');
 
+        $lang_1 = new Zend_Form_Element_Text('language_1');
+        $lang_1->addFilter('StripTags')
+            ->addFilter('StringTrim');
+
+        $lang_2 = new Zend_Form_Element_Text('language_2');
+        $lang_2->addFilter('StripTags')
+            ->addFilter('StringTrim');
+
+        $lang_1_level = new Zend_Form_Element_Text('language_1_level');
+        $lang_1_level->addFilter('StripTags')
+            ->addFilter('StringTrim');
+
+        $lang_2_level = new Zend_Form_Element_Text('language_2_level');
+        $lang_2_level->addFilter('StripTags')
+            ->addFilter('StringTrim');
+
         $city = new Zend_Form_Element_Text('address');
         $city->addFilter('StripTags')
             ->addFilter('StringTrim');
@@ -73,10 +89,22 @@ class Application_Form_Profile extends Application_Form_Form
             ->addValidator('Extension', false, 'jpg,png')
             ->setMultiFile(2);
 
+        $this->addElement('text', 'goal_1', array());
+        $this->addElement('text', 'goal_2', array());
+        $this->addElement('text', 'goal_3', array());
+        $this->addElement('text', 'goal_4', array());
+        $this->addElement('text', 'goal_5', array());
+        $this->addElement('text', 'goal_6', array());
+        $this->addElement('text', 'goal_7', array());
+        $this->addElement('text', 'goal_8', array());
+        $this->addElement('text', 'goal_9', array());
+        $this->addElement('text', 'goal_10', array());
+        $this->addElement('text', 'goal_11', array());
+
         $submit = new Zend_Form_Element_Submit('registration');
         $submit->setLabel($this->getTranslator()->translate('registration'));
 
-        $this->addElements(array($mail, $fio, $images, $phone, $city, $news, $submit, $brit, $passport, $date_passport, $growth, $education, $volumes, $volumes_shoes));
+        $this->addElements(array($mail, $fio, $images, $phone, $city, $news, $submit, $brit, $lang_1, $lang_2, $lang_1_level, $lang_2_level, $passport, $date_passport, $growth, $education, $volumes, $volumes_shoes));
         $this->setMethod('post');
     }
 

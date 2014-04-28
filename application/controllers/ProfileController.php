@@ -18,8 +18,7 @@ class ProfileController extends Zend_Controller_Action
         if ($this->_user->id) {
 
             $form = new Application_Form_Profile();
-            $mapper = new Models_Users_Mapper();
-
+            $mapper = new Models_Users_Mapper($this->_user->id);
             if ($this->_request->isPost() && $form->isValid($this->_request->getPost())){
                 $mapper->getRow($this->_user->id);
                 if (!empty($form->images)) {
@@ -27,14 +26,25 @@ class ProfileController extends Zend_Controller_Action
                     $mapper_images->loadImages($form->images, $this->_user->id);
                 }
                 $mapper->fill($form->getValues());
+                $mapper->goal_1 = $form->goal_1->getValue() ? 1 : 0;
+                $mapper->goal_2 = $form->goal_2->getValue() ? 1 : 0;
+                $mapper->goal_3 = $form->goal_3->getValue() ? 1 : 0;
+                $mapper->goal_4 = $form->goal_4->getValue() ? 1 : 0;
+                $mapper->goal_5 = $form->goal_5->getValue() ? 1 : 0;
+                $mapper->goal_6 = $form->goal_6->getValue() ? 1 : 0;
+                $mapper->goal_7 = $form->goal_7->getValue() ? 1 : 0;
+                $mapper->goal_8 = $form->goal_8->getValue() ? 1 : 0;
+                $mapper->goal_9 = $form->goal_9->getValue() ? 1 : 0;
+                $mapper->goal_10 = $form->goal_10->getValue() ? 1 : 0;
+                $mapper->goal_11 = $form->goal_11->getValue() ? 1 : 0;
+
                 $mapper->save();
             }
 
-            $profile = $mapper->getUser($this->_user->id);
+            $profile = $mapper->convertRow();
             $mapper_images = new Models_Images_Mapper();
             $profile->photos = $mapper_images->getImages($profile->id);
-            $form->populate($profile->_toArray());
-
+            $form->populate($mapper->getArray());
             $this->view->form = $form;
             $this->view->profile = $profile;
         }

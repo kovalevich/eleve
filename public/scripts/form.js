@@ -99,6 +99,7 @@ var Custom = {
 		}
 	},
 	check: function() {
+
 		element = this.nextSibling;
         var $input = $('input#' + this.id);
 		if(element.checked == true && element.type == "checkbox") {

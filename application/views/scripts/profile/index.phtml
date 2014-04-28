@@ -80,29 +80,29 @@
                 <label>Знание иностранных языков:</label>
                 <div class="form_lang">
                     <label>Язык</label>
-                    <input class="tx" type="text" value="">
+                    <input class="tx" type="text" value="<?= $this->form->language_1->getValue() ?>" name="language_1">
                 </div>
                 <div class="form_lang">
                     <label>Уровень владения</label>
                     <div class="sell"  style="width: 168px;">
-                        <select class="styled" name="l1">
-                            <option>средний</option>
-                            <option>средний1</option>
-                            <option>средний2</option>
+                        <select class="styled" name="language_1_level">
+                            <option value="0" <?= $this->form->language_1_level->getValue() == '0' ? 'selected' : '' ?>>низкий</option>
+                            <option value="1" <?= $this->form->language_1_level->getValue() == '1' ? 'selected' : '' ?>>средний</option>
+                            <option value="2" <?= $this->form->language_1_level->getValue() == '2' ? 'selected' : '' ?>>высокий</option>
                         </select>
                     </div>
                 </div>
                 <div class="form_lang">
                     <label>Язык</label>
-                    <input class="tx" type="text" value="">
+                    <input class="tx" type="text" value="<?= $this->form->language_2->getValue() ?>" name="language_2">
                 </div>
                 <div class="form_lang">
                     <label>Уровень владения</label>
-                    <div class="sell" style="width: 168px;">
-                        <select class="styled" name="l2">
-                            <option>средний</option>
-                            <option>средний1</option>
-                            <option>средний2</option>
+                    <div class="sell"  style="width: 168px;">
+                        <select class="styled" name="language_2_level">
+                            <option value="0" <?= $this->form->language_2_level->getValue() == '0' ? 'selected' : '' ?>>низкий</option>
+                            <option value="1" <?= $this->form->language_2_level->getValue() == '1' ? 'selected' : '' ?>>средний</option>
+                            <option value="2" <?= $this->form->language_2_level->getValue() == '2' ? 'selected' : '' ?>>высокий</option>
                         </select>
                     </div>
                 </div>
@@ -111,28 +111,28 @@
             <div class="form_check">
                 <label>Ваши цели:</label>
                 <div class="form_check_box">
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_1">
+                        <input type="checkbox" id="goal_1" name="goal_1" class="styled" <?= $this->form->goal_1->getValue() ? 'checked' : ''?>>
                         <label>Мастер-классы</label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_2">
+                        <input type="checkbox" id="goal_2" name="goal_2" class="styled" <?= $this->form->goal_2->getValue() ? 'checked' : ''?>>
                         <label>Промо-акции</label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_3">
+                        <input type="checkbox" id="goal_3" name="goal_3" class="styled" <?= $this->form->goal_3->getValue() ? 'checked' : ''?>>
                         <label>Съемки для катологов</label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_4">
+                        <input type="checkbox" id="goal_4" name="goal_4" class="styled" <?= $this->form->goal_4->getValue() ? 'checked' : ''?>>
                         <label>Съемки в киносериалах</label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_5">
+                        <input type="checkbox" id="goal_5" name="goal_5" class="styled" <?= $this->form->goal_5->getValue() ? 'checked' : ''?>>
                         <label>Съемки в рекламе</label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_6">
+                        <input type="checkbox" id="goal_6" name="goal_6" class="styled" <?= $this->form->goal_6->getValue() ? 'checked' : ''?>>
                         <label>Вокальные, танцевальные
                             или другие проекты</label>
                     </div>
@@ -140,24 +140,24 @@
 
 
                 <div class="form_check_box">
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_7">
+                        <input type="checkbox" id="goal_7" name="goal_7" class="styled" <?= $this->form->goal_7->getValue() ? 'checked' : ''?>>
                         <label>Fashion показы, defile</label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_8">
+                        <input type="checkbox" id="goal_8" name="goal_8" class="styled" <?= $this->form->goal_8->getValue() ? 'checked' : ''?>>
                         <label>Презентации и выставки</label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_9">
+                        <input type="checkbox" id="goal_9" name="goal_9" class="styled" <?= $this->form->goal_9->getValue() ? 'checked' : ''?>>
                         <label>Съемки для журналов</label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_10">
+                        <input type="checkbox" id="goal_10" name="goal_10" class="styled" <?= $this->form->goal_10->getValue() ? 'checked' : ''?>>
                         <label>Съемки в клипах</label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
+                    <div class="chbox" id="goal_11">
+                        <input type="checkbox" id="goal_11" name="goal_11" class="styled" <?= $this->form->goal_11->getValue() ? 'checked' : ''?>>
                         <label>Работа переводчиком</label>
                     </div>
                 </div>
