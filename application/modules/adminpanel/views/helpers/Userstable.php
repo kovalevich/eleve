@@ -35,6 +35,8 @@ class Zend_View_Helper_Userstable
                   <th>Имя</th>
                   <th>Ссылка в каталоге</th>
                   <th>Роль</th>
+                  <th>Цель</th>
+                  <th>Тип</th>
                   <th></th>
                 </tr>
               </thead>
@@ -46,11 +48,17 @@ class Zend_View_Helper_Userstable
                         <tr>
                             <td>' . $entry->id . '</td>
         	                <td>' . $entry->name . '</td>
-                            <td><a href="#">#</a></td>
+                            <td><a href="' . $this->view->url(array('id'=>$entry->id), 'catalogin') . '">' . $this->view->url(array('id'=>$entry->id), 'catalogin') . '</a></td>
                             <td>' . $this->view->role($entry->role) . '</td>
+                            <td>' . $this->view->target($entry->account_type) . '</td>
+                            <td>' . $this->view->type($entry->account_type1) . '</td>
                             <td>
-                                ' . $this->view->edit('user', $entry) . '
-                                ' . $this->view->delete('user', $entry) . '
+                                <a href="/profile/' . $entry->id . '"><span class="glyphicon glyphicon-pencil"></span></a>
+                                ' . ($entry->account_status ?
+                                '<a href="/adminpanel/users?deactivate=' . $entry->id . '"><span class="glyphicon glyphicon-star"></span></a>' :
+                                '<a href="/adminpanel/users?activate=' . $entry->id . '"><span class="glyphicon glyphicon-star-empty"></span></a>') .
+
+                            $this->view->delete('user', $entry) . '
                             </td>
                         </tr>
         	            ';

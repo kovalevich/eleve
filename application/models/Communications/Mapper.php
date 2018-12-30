@@ -6,7 +6,7 @@ class Models_Communications_Mapper extends Models_Mapper
     public function __construct($id = null)
     {
     	parent::__construct('Communications');
-    	if ($id) {
+    	if (isset($id)) {
     		$this->getRow($id);
     	}
     	return $this;

@@ -3,7 +3,7 @@
 foreach ($this->container as $page) {
 	$active = $page->isActive(true);
 	echo '<li>';
-	echo '<a class="'. ($active ? 'active' : '') .'" href="' . $this->baseUrl($page->getHref()) . '">' . $page->getLabel() . '</a>';
+	echo '<a class="'. ($active ? 'active' : '') .'" href="' . $this->baseUrl($page->getHref()) . '">' . $this->translate($page->getLabel()) . '</a>';
 	/*if (count($page->pages)) {
 	    echo '<ul>';
 		foreach ($page->pages as $child) {

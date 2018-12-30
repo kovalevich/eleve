@@ -47,6 +47,10 @@ class Zend_View_Helper_Edit
                 $url = $this->view->url(array('id'=>$obj->id), 'editcommunication');
                 break;
             }
+            case 'casting': {
+                $url = $this->view->url(array('id'=>$obj->id), 'editcasting');
+                break;
+            }
         }
 
         $html = '<a href="' . $url . '"><span class="glyphicon glyphicon-pencil"></span></a>';

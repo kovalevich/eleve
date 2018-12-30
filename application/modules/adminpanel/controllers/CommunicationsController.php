@@ -67,11 +67,9 @@ class Adminpanel_CommunicationsController extends Zend_Controller_Action
 
     public function deleteAction()
     {
-        if ($this->_request->getParam('id', FALSE)) {
             $model = new Models_Communications_Mapper();
             $model->delete($this->_request->getParam('id', FALSE));
             $this->_helper->redirector('index', 'communications', 'adminpanel');
-        }
     }
 
 }

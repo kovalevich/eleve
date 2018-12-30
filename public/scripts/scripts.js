@@ -1,44 +1,59 @@
 
 $(document).ready(function(){
 
-
-    var i=0;
-    j=0;
-    speed = 150;
-    cSiza = $(".caledoscop img").size();
-    $(".caledoscop img").preload(function(){
-        $(".load").fadeOut();
-        setInterval(function(){
-            if (j==cSiza*2 - 2)
-            {
-                j=0;
-                i=0;
-            }
-            j++;
-            if (j>=cSiza) {
-                i= i - 1;
-                $(".caledoscop img").css("display", "none");
-                $(".caledoscop img:eq("+i+")").css("display", "block");
-            }
-            if (j<cSiza) {
-                i++;
-                $(".caledoscop img").css("display", "none");
-                $(".caledoscop img:eq("+i+")").css("display", "block");
-            }
-        }, speed);
+    $('#check_type').unbind().change(function(e) {
+        $('#type_account').slideUp('fast');
+        $('#type_account_discount').slideUp('fast');
+        messages =
+            [
+                'Да, я хочу получать новости и уведомления об акциях и закрытых рапсродажах для держателей дисконтной карты. 1',
+                'Да, я хочу получать новости и уведомления об акциях и закрытых рапсродажах для держателей дисконтной карты. 2',
+                'Да, я хочу получать новости и уведомления об акциях и закрытых рапсродажах для держателей дисконтной карты. 3',
+                'Да, я хочу получать новости и уведомления об акциях и закрытых рапсродажах для держателей дисконтной карты. 4'
+            ];
+        $('#label').html(messages[$(this).val()]);
+        if($(this).val() == 1) {
+            $('#type_account').slideDown('fast');
+            return false;
+        }
+        if($(this).val() == 3) {
+            $('#type_account_discount').slideDown('fast');
+            return false;
+        }
     });
 
+    var is_caledoscop = false;
+    var i = 1;
+    var j = 1;
+    speed = 5;
+    position = 0;
+    cSiza = $(".caledoscop img").size();
 
+    $(".caledoscop img").preload(function(){
+        $(".load").fadeOut();
+        is_caledoscop = true;
+    });
 
+    $('html').mousemove(function(e){
+        if(position == speed){
+            position = 0;
+            $(".caledoscop img").css("display", "none");
+            $(".caledoscop img:eq("+j+")").css("display", "block");
+            if ((j == 1 && i == -1) || (j == cSiza-1 && i == 1)) i *= -1;
+            j += i;
+        }
+        else position ++;
+    });
 
     $(".vacancy .name:first").addClass("active");
     $(".vacancy .one_vacancy:first").show();
 
-    $(".vacancy .name").click(function(){
-        $(this).next(".one_vacancy").slideToggle("slow")
-            .siblings(".one_vacancy:visible").slideUp("slow");
+    $(".vacancy .name").unbind().click(function(){
+        $('.one_vacancy:visible').slideUp("slow");
+        $('.name').removeClass("active");
+
+        $(this).next(".one_vacancy").slideDown("slow");
         $(this).toggleClass("active");
-        $(this).siblings(".name").removeClass("active");
         return false;
     });
 

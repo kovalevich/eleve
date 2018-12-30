@@ -1,0 +1,61 @@
+<div class="content_box">
+	<h1>Catalog:</h1>
+	<div class="one_model">
+		<h2><?= strtoupper($this->user->name) ?></h2>
+        <div class="model_data">
+            <p><?= $this->translate(_('Город')) ?>: <?= $this->user->address ?>.</p>
+            <p><?= $this->translate(_('Рост')) ?>: <?= $this->user->growth ?>.</p>
+            <?php if($this->user->volumes) : ?>
+                <p><?= $this->translate(_('Объемы')) ?>: <?= $this->user->volumes ?>.</p>
+            <?php endif; ?>
+            <p><?= $this->translate(_('Размер обуви')) ?>: <?= $this->user->volumes_shoes ?>.</p>
+        </div>
+		<div class="model_img">
+			<div class="model_img_left">
+				<?= $this->photo($this->user->getPhoto(0), 1, true) ?>
+			</div>
+			<ul class="list_model_img">
+				<li>
+					<?= $this->photo($this->user->getPhoto(1), 3, true) ?>
+				</li>
+				<li>
+					<?= $this->photo($this->user->getPhoto(2), 3, true) ?>
+				</li>
+				<li>
+					<?= $this->photo($this->user->getPhoto(3), 3, true) ?>
+				</li>
+				<li>
+					<?= $this->photo($this->user->getPhoto(4), 3, true) ?>
+				</li>
+                <?php foreach($this->user->photos as $k=>$photo): if($k > 4) :?>
+                    <li style="display: none;">
+                        <?= $this->photo($this->user->getPhoto($k), 3, true) ?>
+                    </li>
+                <?php endif; endforeach; ?>
+			</ul>
+		</div>
+
+        <p><?= $this->translate(_('Опыт работы на выставках, презентациях, съемках и т.д. (наиболее
+            интересные проекты)')) ?>: <?= $this->user->experience ?></p>
+        <p><?= $this->translate(_('Образование')) ?>: <?= $this->user->education ?></p>
+        <p>
+<?= $this->translate(_('Знание иностранзыных яков')) ?>: <?= !$this->user->language_1 && !$this->user->language_2 ? '-' : '' ?>
+            <?= $this->user->language_1 ? $this->user->language_1 . ' (' . $this->level($this->user->language_1_level) . ') ' : '' ?>
+            <?= $this->user->language_2 ? $this->user->language_2 . ' (' . $this->level($this->user->language_2_level) . ') ' : '' ?>
+        </p>
+        <p><?= $this->translate(_('Цели')) ?>:
+            <?= $this->user->goal_1 ? $this->goal(1) . ', ' : '' ?>
+            <?= $this->user->goal_2 ? $this->goal(2) . ', ' : '' ?>
+            <?= $this->user->goal_3 ? $this->goal(3) . ', ' : '' ?>
+            <?= $this->user->goal_4 ? $this->goal(4) . ', ' : '' ?>
+            <?= $this->user->goal_5 ? $this->goal(5) . ', ' : '' ?>
+            <?= $this->user->goal_6 ? $this->goal(6) . ', ' : '' ?>
+            <?= $this->user->goal_7 ? $this->goal(7) . ', ' : '' ?>
+            <?= $this->user->goal_8 ? $this->goal(8) . ', ' : '' ?>
+            <?= $this->user->goal_9 ? $this->goal(9) . ', ' : '' ?>
+            <?= $this->user->goal_10 ? $this->goal(10) . ', ' : '' ?>
+            <?= $this->user->goal_11 ? $this->goal(11) . ', ' : '' ?>
+        </p>
+        <p><?= $this->translate(_('Личные качества,  выделяющие вас')) ?>: <?= $this->user->quality ?></p>
+	</div>
+</div>

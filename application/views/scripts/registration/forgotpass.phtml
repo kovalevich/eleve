@@ -1,0 +1,20 @@
+<div class="content_box">
+    <h1><?php echo $this->translate(_('Forgot your password?')) ?></h1>
+    <form method="post">
+        <div class="form_page">
+            <div class="form_page_data">
+                    <?= $this->translate(_('Введите ваш email и мы вышлем вам новый пароль для входа в кабинет')) ?>
+                    <?php if($this->errors) : ?>
+                        <p class="alert alert-danger"><?php echo $this->translate($this->errors)?></p>
+                    <?php endif; ?>
+                    <table>
+                        <tr>
+                            <td><label><?= $this->translate(_('Адрес e-mail')) ?>:</label></td>
+                            <td><input class="tx" type="text" value="" name="email"></td>
+                        </tr>
+                    </table>
+                    <input class="btn_save" type="submit" value="<?= $this->translate(_('Отправить')) ?>">
+            </div>
+        </div>
+    </form>
+</div>

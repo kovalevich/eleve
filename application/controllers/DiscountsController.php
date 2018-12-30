@@ -24,6 +24,12 @@ class DiscountsController extends Zend_Controller_Action
         }
     }
 
+    public function allAction()
+    {
+        $mapper = new Models_Discounts_Mapper();
+        $this->view->companies = $mapper->getCompanies();
+    }
+
 
 }
 

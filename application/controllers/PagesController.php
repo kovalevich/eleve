@@ -33,4 +33,9 @@ class PagesController extends Zend_Controller_Action
         $this->view->form = $form;
         $this->view->errors = $form->getErrors();
     }
+
+    public function activationAction()
+    {
+
+    }
 }

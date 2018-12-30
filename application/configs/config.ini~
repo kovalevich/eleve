@@ -1,0 +1,13 @@
+db.adapter = "pdo_mysql"
+db.params.host = "localhost"
+db.params.username = "root"
+db.params.password = "trueadmin2108"
+db.params.dbname = "eleve"
+db.isDefaultTableAdapter = true
+
+my.salt = 21081989
+my.items_on_page = 15
+my.date_format = Y-m-d H:i:s
+my.view_date_format = d.m.Y
+my.contact_email = mail@mail.ru
+my.items_on_page = 21

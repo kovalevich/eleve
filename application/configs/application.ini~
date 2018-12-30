@@ -1,0 +1,213 @@
+[production]
+phpSettings.display_startup_errors = 1
+phpSettings.display_errors = 1
+
+includepaths[] = APPLICATION_PATH "/../library"
+includepaths[] = APPLICATION_PATH "/classes"
+
+bootstrap.path = APPLICATION_PATH "/Bootstrap.php"
+bootstrap.class = "Bootstrap"
+appnamespace = "Application"
+resources.frontController.controllerDirectory = APPLICATION_PATH "/controllers"
+resources.frontController.params.displayExceptions = 1
+
+resources.layout.layout = "layout"
+resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts"
+adminpanel.resources.layout.layout = "layout"
+adminpanel.resources.layout.layoutPath = APPLICATION_PATH "/modules/adminpanel/layouts/scripts"
+
+resources.translate.adapter = "Array"
+;
+; Set the content for the translation adapter (required!)
+resources.translate.content = APPLICATION_PATH "/../data/locales"
+;
+; Options for Zend_Translate and it's adapters
+; resources.translate.options.clear = false
+resources.translate.options.disableNotices = true
+; resources.translate.options.ignore = "."
+; resources.translate.options.logUntranslated = false
+; resources.translate.options.reload = false
+; resources.translate.options.route = ;null
+resources.translate.options.scan = "directory"
+resources.translate.options.tag = "Zend_Translate"
+resources.translate.locale = "ru"
+;
+;
+; Setting a logger via this config file is currently not supported, but the 
+; logging options can be set:
+; resources.translate.options.logMessage = "Untranslated message within '%locale%': %message%"
+; resources.translate.options.logPriority = 5
+;
+; Use a cache for Zend_Translate. The cache has to be configured with the 
+; cachemanager resource. 
+; resources.translate.cache = <name>
+;
+; The translate instance is registered in Zend_Registry with the following key
+resources.translate.options.registry_key = "Zend_Translate"
+
+resources.frontController.moduleDirectory = APPLICATION_PATH "/modules"
+
+resources.router.routes.profile.route = u/:id
+resources.router.routes.profile.defaults.controller = catalog
+resources.router.routes.profile.defaults.module = default
+resources.router.routes.profile.defaults.action = in
+resources.router.routes.profile.defaults.id = ""
+resources.router.routes.profile.reqs.id = \w+
+
+resources.router.routes.news.route = news/
+resources.router.routes.news.defaults.controller = articles
+resources.router.routes.news.defaults.module = default
+resources.router.routes.news.defaults.action = category
+resources.router.routes.news.defaults.id = "2"
+resources.router.routes.news.reqs.id = \d+
+
+resources.router.routes.newsin.route = news/id/:id
+resources.router.routes.newsin.defaults.controller = articles
+resources.router.routes.newsin.defaults.module = default
+resources.router.routes.newsin.defaults.action = index
+resources.router.routes.newsin.defaults.id = ""
+resources.router.routes.newsin.reqs.id = \d+
+
+resources.router.routes.category.route = category/:id
+resources.router.routes.category.defaults.controller = articles
+resources.router.routes.category.defaults.module = default
+resources.router.routes.category.defaults.action = category
+resources.router.routes.category.reqs.id = \d+
+
+resources.router.routes.discountcategory.route = discounts/:id
+resources.router.routes.discountcategory.defaults.controller = discounts
+resources.router.routes.discountcategory.defaults.module = default
+resources.router.routes.discountcategory.defaults.action = category
+resources.router.routes.discountcategory.reqs.id = \d+
+
+resources.router.routes.admincatalog.route = adminpanel/catalog/:page
+resources.router.routes.admincatalog.defaults.controller = catalog
+resources.router.routes.admincatalog.defaults.module = adminpanel
+resources.router.routes.admincatalog.defaults.action = index
+resources.router.routes.admincatalog.defaults.page = ""
+resources.router.routes.admincatalog.reqs.page = \d+
+
+resources.router.routes.catalog.route = catalog/
+resources.router.routes.catalog.defaults.controller = catalog
+resources.router.routes.catalog.defaults.action = index
+
+resources.router.routes.pages.route = pages/:id
+resources.router.routes.pages.defaults.controller = articles
+resources.router.routes.pages.defaults.action = index
+resources.router.routes.pages.defaults.id = ""
+resources.router.routes.pages.reqs.id = \d+
+
+resources.router.routes.cat.route = categories/:id
+resources.router.routes.cat.defaults.controller = articles
+resources.router.routes.cat.defaults.action = category
+resources.router.routes.cat.defaults.id = ""
+resources.router.routes.cat.reqs.id = \w+
+
+resources.router.routes.deleteuser.route = users/delete/:id
+resources.router.routes.deleteuser.defaults.controller = users
+resources.router.routes.deleteuser.defaults.action = delete
+resources.router.routes.deleteuser.defaults.module = adminpanel
+resources.router.routes.deleteuser.defaults.id = ""
+resources.router.routes.deleteuser.reqs.id = \w+
+
+resources.router.routes.deletecommunication.route = adminpanel/communications/delete/:id
+resources.router.routes.deletecommunication.defaults.controller = communications
+resources.router.routes.deletecommunication.defaults.action = delete
+resources.router.routes.deletecommunication.defaults.module = adminpanel
+resources.router.routes.deletecommunication.defaults.id = ""
+resources.router.routes.deletecommunication.reqs.id = \w+
+
+resources.router.routes.editcommunication.route = adminpanel/communications/edit/:id
+resources.router.routes.editcommunication.defaults.controller = communications
+resources.router.routes.editcommunication.defaults.action = edit
+resources.router.routes.editcommunication.defaults.module = adminpanel
+resources.router.routes.editcommunication.defaults.id = ""
+resources.router.routes.editcommunication.reqs.id = \w+
+
+resources.router.routes.userscontrol.route = users/:page
+resources.router.routes.userscontrol.defaults.module = adminpanel
+resources.router.routes.userscontrol.defaults.controller = users
+resources.router.routes.userscontrol.defaults.action = index
+resources.router.routes.userscontrol.defaults.page = ""
+resources.router.routes.userscontrol.reqs.page = \d+
+
+resources.router.routes.edituser.route = adminpanel/users/edit/:id
+resources.router.routes.edituser.defaults.controller = users
+resources.router.routes.edituser.defaults.action = edit
+resources.router.routes.edituser.defaults.module = adminpanel
+resources.router.routes.edituser.defaults.id = ""
+resources.router.routes.edituser.reqs.id = \w+
+
+resources.router.routes.edituserpass.route = adminpanel/users/editpassword/:id
+resources.router.routes.edituserpass.defaults.controller = users
+resources.router.routes.edituserpass.defaults.action = edipassword
+resources.router.routes.edituserpass.defaults.module = adminpanel
+resources.router.routes.edituserpass.defaults.id = ""
+resources.router.routes.edituserpass.reqs.id = \w+
+
+resources.router.routes.editcategory.route = aminpanel/categories/edit/:id
+resources.router.routes.editcategory.defaults.controller = categories
+resources.router.routes.editcategory.defaults.action = edit
+resources.router.routes.editcategory.defaults.module = adminpanel
+resources.router.routes.editcategory.defaults.id = ""
+resources.router.routes.editcategory.reqs.id = \w+
+
+resources.router.routes.deletecategory.route = categories/delete/:id
+resources.router.routes.deletecategory.defaults.controller = categories
+resources.router.routes.deletecategory.defaults.action = delete
+resources.router.routes.deletecategory.defaults.module = adminpanel
+resources.router.routes.deletecategory.defaults.id = ""
+resources.router.routes.deletecategory.reqs.id = \w+
+
+
+resources.router.routes.editarticle.route = aminpanel/articles/edit/:id
+resources.router.routes.editarticle.defaults.controller = articles
+resources.router.routes.editarticle.defaults.action = edit
+resources.router.routes.editarticle.defaults.module = adminpanel
+resources.router.routes.editarticle.defaults.id = ""
+resources.router.routes.editarticle.reqs.id = \w+
+
+resources.router.routes.deletearticle.route = articles/delete/:id
+resources.router.routes.deletearticle.defaults.controller = articles
+resources.router.routes.deletearticle.defaults.action = delete
+resources.router.routes.deletearticle.defaults.module = adminpanel
+resources.router.routes.deletearticle.defaults.id = ""
+resources.router.routes.deletearticle.reqs.id = \w+
+
+resources.router.routes.editcompany.route = aminpanel/discounts/edit/:id
+resources.router.routes.editcompany.defaults.controller = discounts
+resources.router.routes.editcompany.defaults.action = edit
+resources.router.routes.editcompany.defaults.module = adminpanel
+resources.router.routes.editcompany.defaults.id = ""
+resources.router.routes.editcompany.reqs.id = \w+
+
+resources.router.routes.deletecompany.route = aminpanel/discounts/delete/:id
+resources.router.routes.deletecompany.defaults.controller = discounts
+resources.router.routes.deletecompany.defaults.action = delete
+resources.router.routes.deletecompany.defaults.module = adminpanel
+resources.router.routes.deletecompany.defaults.id = ""
+resources.router.routes.deletecompany.reqs.id = \w+
+
+resources.router.routes.page_career.route = career/
+resources.router.routes.page_career.defaults.controller = pages
+resources.router.routes.page_career.defaults.action = career
+resources.router.routes.page_career.defaults.module = default
+
+resources.router.routes.page_contacts.route = contacts/
+resources.router.routes.page_contacts.defaults.controller = pages
+resources.router.routes.page_contacts.defaults.action = contacts
+resources.router.routes.v.defaults.module = default
+
+[staging : production]
+phpSettings.display_startup_errors = 1
+phpSettings.display_errors = 1
+
+[testing : production]
+phpSettings.display_startup_errors = 1
+phpSettings.display_errors = 1
+resources.frontController.params.displayExceptions = 1
+
+[development : production]
+phpSettings.display_startup_errors = 1
+phpSettings.display_errors = 1
+resources.frontController.params.displayExceptions = 1

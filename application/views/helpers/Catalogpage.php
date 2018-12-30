@@ -26,18 +26,19 @@ class Zend_View_Helper_Catalogpage
      */
     public function catalogpage ($entries)
     {
-        $list = '';
+        $list = '<ul class="catalog_separate">';
         if (count($entries) > 0) {
             foreach ($entries as $entry) {
                 $photo = $entry->getPhoto(0);
                 $list .= '<li>
-                            <a href="' . $this->view->url(array('id'=>$entry->id), 'catalogin') . '">' . $this->view->photo($photo, 2) . '</a>
-                            <span class="name"><a href="' . $this->view->url(array('id'=>$entry->id), 'catalogin') . '">' . $entry->name . '</a></span>
+                            <a href="' . $this->view->url(array('id'=>$entry->public_id), 'catalogin') . '">' . $this->view->photo($photo, 2) . '</a>
+                            <span class="name"><a href="' . $this->view->url(array('id'=>$entry->public_id), 'catalogin') . '">' . $entry->name . '</a></span>
                         </li>';
             }
+            $list .= '</ul>';
         }
         else {
-            $list .= 'По вашему запросу нет предложений';
+            $list = '<p>' . $this->view->translate(_('По вашему запросу нет предложений')) . '</p>';
         }
         return $list;
     }

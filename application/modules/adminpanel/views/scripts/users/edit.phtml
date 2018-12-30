@@ -1,87 +1,77 @@
-<div class="content">
-    <div class="item">
-        <h2><?php echo $this->title ?></h2>
-        <a href="<?php echo $this->url(array('id'=>$this->entry->id), 'financesuser')?>" target="_blanc">СЧЕТА</a> <a href="<?php echo $this->url(array('id'=>$this->entry->id), 'reportuser')?>" target="_blanc">ОТЧЕТ</a> <a href="<?php echo $this->url(array('id'=>$this->entry->id), 'edituserpass')?>">СМЕНИТЬ ПАРОЛЬ</a>
-        <form action="<?php echo $this->form->getAction () ?>" enctype="multipart/form-data" method="post" "<?php echo $this->form->getAttrib('class')?>">
-        <table class="vertical">
-            <tr>
-                <?php echo "<th>Пользователь</th><td>{$this->user($this->entry)}</td>" ?>
-            </tr>
-            <tr>
-                <th>Уровень доступа</th>
-                <td>
-                    <?php echo $this->form->role ?>
-                </td>
-            </tr>
-            <tr>
-                <th>Статус</th>
-                <td>
-                    <?php echo $this->form->status ?>
-                </td>
-            </tr>
-            <tr>
-                <th>Загруженные файлы</th>
-                <td>
-                <?php if (count($this->entry->files) > 0):?>
-                <?php 
-                foreach ($this->entry->files as $file) {
-                    echo "<p><span class=\"information\">{$this->nicetime($file->loadet)}:</span> <a href=\"{$file->getLinc()}\">{$file->name}</a></p>";
-                }
-                ?>
-                <?php endif;?>
-                </td>
-            </tr>
-            
-            <tr>
-                <?php echo "<th>{$this->translate('mail')}</th><td>{$this->mailto($this->entry->email)}</td>" ?>
-            </tr>
-            <tr>
-                <?php echo "<th>{$this->translate('city')}</th><td>{$this->entry->city}</td>" ?>
-            </tr>
-            <tr>
-                <?php echo "<th>{$this->translate('phone')}</th><td>{$this->entry->phone}</td>" ?>
-            </tr>
-            <tr>
-                <?php  echo "<th>{$this->translate('him themes')}</th>" ?>
-                <td>
-                <?php if (count($this->user_themes) > 0) foreach ($this->user_themes as $theme) {
-                        echo "{$theme->title}, ";
-                    }
-                ?>
-            </tr>
-            <tr>
-                <th><?php echo $this->translate('modified')?></th>
-                <td><?php echo $this->entry->modified ? date("d.m.Y - H:i", strtotime($this->entry->modified)) : '-' ?></td>
-            </tr>
-            <tr>
-                <th><?php echo $this->translate('last_visit')?></th>
-                <td><?php echo date("d.m.Y - H:i", strtotime($this->entry->last_visit)) ?></td>
-            </tr>
-            <tr>
-                <th><?php echo $this->translate('last_buy')?></th>
-                <td><?php echo $this->entry->last_buy ? date("d.m.Y - H:i", strtotime($this->entry->last_buy)) : '-' ?></td>
-            </tr>
-            <tr>
-                <th>Заметка об пользователе</th>
-                <td><?php echo $this->form->notation ?></td>
-            </tr>
-        </table>
-        <?php echo $this->form->save ?>
-        </form>
+<?php $this->headTitle('Редактировать событие', 'PREPEND'); ?>
+
+<h2>Редактировать событие</h2>
+
+<form class="form-horizontal" role="form" method="post">
+
+    <div class="form-group">
+        <label for="category" class="col-sm-3 control-label">Категория</label>
+        <div class="col-sm-9">
+            <select name="category_id" id="category" class="form-control">
+                <?php foreach ($this->categories as $category): ?>
+                    <option <?php echo $this->form->category_id->getValue() == $category->id ? 'selected ' : ''; ?>value="<?php echo $category->id; ?>"><?php echo $category->title; ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
     </div>
-    
-    <?php if ($this->entry->role == 'user') :?>
-    <div class="item">
-        <h2>Работы пользователя в каталоге</h2>
-        <?php echo $this->projectstable($this->projects)?>
-        
+
+    <div class="form-group">
+        <label for="title" class="col-sm-3 control-label">Название события</label>
+        <div class="col-sm-9">
+            <input type="text" name="title" class="form-control" id="title" value="<?php echo $this->form->title->getValue() ?>" placeholder="Название события">
+        </div>
     </div>
-    <?php endif;?>
-    
-    <?php if ($this->entry->role == 'author') :?>
-    <div class="item">
-        <h2>Заказы, которые выполняет этот пользователь</h2>
-        <?php echo $this->orderstable($this->orders)?>
+
+    <div class="form-group">
+        <label for="editor" class="col-sm-3 control-label">Текст</label>
+        <div class="col-sm-9">
+            <textarea id="editor" name="text" rows="10" cols="80">
+                <?php echo $this->form->text->getValue() ?>
+            </textarea>
+            <script src="/scripts/ckeditor/ckeditor.js"></script>
+            <script>
+                CKEDITOR.replace( 'editor', {
+                    toolbar:
+                        [
+                            { name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+                            { name: 'insert', items : [ 'Image','Table','HorizontalRule','SpecialChar'] },
+                            '/',
+                            { name: 'basicstyles', items : ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
+                            { name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ] },
+                            '/',
+                            { name: 'paragraph', items : [ 'NumberedList','BulletedList' ] },
+                            { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+                            { name: 'tools', items : [ 'Maximize', 'ShowBlocks' ] }
+                        ]
+                });
+            </script>
+        </div>
     </div>
-    <?php endif;?>
-</div>
+
+    <div class="form-group">
+        <label for="meta_title" class="col-sm-3 control-label">meta title</label>
+        <div class="col-sm-9">
+            <input type="text" name="meta_title" class="form-control" id="meta_title" value="<?php echo $this->form->meta_title->getValue() ?>" placeholder="Заголовок">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="meta_keywords" class="col-sm-3 control-label">meta keywords</label>
+        <div class="col-sm-9">
+            <input type="text" name="meta_keywords" class="form-control" id="meta_keywords" value="<?php echo $this->form->meta_keywords->getValue() ?>" placeholder="Заголовок">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="meta_description" class="col-sm-3 control-label">meta keywords</label>
+        <div class="col-sm-9">
+            <textarea name="meta_description" rows="3" class="form-control"><?php echo $this->form->meta_description->getValue();?></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-floppy-disk"></span> Сохранить</button>
+        </div>
+    </div>
+</form>

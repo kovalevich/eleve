@@ -42,7 +42,7 @@ class Zend_View_Helper_Articleslist
                     $list .= '<li><h3><a href="' . $this->view->url(array('id'=>$entry->id), 'newsin') . '">' . $entry->title . '</a></h3>
                         <span class="date">' . $this->view->nicetime($entry->created) . '</span>
                         ' . stristr($entry->text, "<hr", true) . '
-                        <a href="#">подробнее</a></li>';
+                        <a href="' . $this->view->url(array('id'=>$entry->id), 'newsin') . '">подробнее</a></li>';
             	}
             	$list .= '</ul>';
             }

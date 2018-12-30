@@ -1,140 +1,159 @@
 <div class="content_box">
-    <h1>Profile:</h1>
+    <h1><?= $this->translate(_('Profile')) ?>:</h1>
     <form method="post" enctype="<?= $this->form->getEnctype() ?>">
         <div class="form_page">
-            <p>В нашем магазине Вы всегда сможете поднять себе настроение: яркая,
+            <p><?= $this->translate(_('В нашем магазине Вы всегда сможете поднять себе настроение: яркая,
             оригинальная и удобная одежда, в которой легко соответствовать любой
             ситуации, представлена в Eleve круглый год. При этом обновление
             ассортимента происходит постоянно, практически каждую неделю
-            в магазине.</p>
+            в магазине.')) ?></p>
             <div class="form_page_data">
                 <table>
                     <tr>
-                        <td><label>Представьтесь, пожалуйста:</label></td>
+                        <td>
+                            <?php if($this->profile->account_status == 0) :?>
+                                <?= $this->translate(_('Ваш аккаунт не активирован. Для отображения вашей анкеты в каталоге активируйте аккаунт!')); ?>:
+                                <a href="/activation"><?= $this->translate(_('активация')) ?></a><br/><br/>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                </table>
+                <?php if($this->user->account_type == 1 || $this->user->account_type == 2) : ?>
+                <table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Адрес вашей анкеты')) ?>: eleve.by/u/</label></td>
+                        <td><input class="tx" type="text" name="public_id" value="<?php echo $this->profile->public_id ?>"></td>
+                    </tr>
+                </table>
+                <?php endif; ?>
+                <table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Представьтесь, пожалуйста')) ?>:</label></td>
                         <td><input class="tx" type="text" name="name" value="<?php echo $this->form->name->getValue() ?>"></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Дата рождения:</label></td>
-                        <td><input class="tx" type="text" name="date_brit" value="<?php echo $this->form->date_brit->getValue() ?>"></td>
+                        <td><label><?= $this->translate(_('Дата рождения')) ?>:</label></td>
+                        <td><input class="tx" type="text" name="date_brit" value="<?= date('d.m.Y', strtotime($this->form->date_brit->getValue())) ?>"></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Серия и номер паспорта:</label></td>
+                        <td><label><?= $this->translate(_('Серия и номер паспорта')) ?>:</label></td>
                         <td><input class="tx" type="text" name="passport" value="<?php echo $this->form->passport->getValue() ?>"></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Кем и когда выдан:</label></td>
+                        <td><label><?= $this->translate(_('Кем и когда выдан')) ?>:</label></td>
                         <td><input class="tx" type="text" name="date_passport" value="<?php echo $this->form->date_passport->getValue() ?>"></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Фактическое место <br> жительства (адрес):</label></td>
+                        <td><label><?= $this->translate(_('Фактическое место <br> жительства (адрес)')) ?>:</label></td>
                         <td><textarea rows="5" name="address" cols="5"><?php echo $this->form->address->getValue() ?></textarea></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Номер телефона:</label></td>
+                        <td><label><?= $this->translate(_('Номер телефона')) ?>:</label></td>
                         <td><input class="tx" type="text" name="phone" value="<?php echo $this->form->phone->getValue() ?>"></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Адрес e-mail:</label></td>
+                        <td><label><?= $this->translate(_('Адрес e-mail')) ?>:</label></td>
                         <td><input class="tx" type="text" name="email" value="<?php echo $this->form->email->getValue() ?>"></td>
                     </tr>
                 </table>
+                <?php if($this->user->account_type == 1 || $this->user->account_type == 2) : ?>
                 <table>
                     <tr>
-                        <td><label>Рост (без каблуков):</label></td>
+                        <td><label><?= $this->translate(_('Рост (без каблуков)')) ?>:</label></td>
                         <td><input class="tx" type="text" name="growth" value="<?php echo $this->form->growth->getValue() ?>"></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Объемы фигуры: </label></td>
+                        <td><label><?= $this->translate(_('Объемы фигуры')) ?>: </label></td>
                         <td><input class="tx" type="text" name="volumes" value="<?php echo $this->form->volumes->getValue() ?>"></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Размер обуви:</label></td>
+                        <td><label><?= $this->translate(_('Размер обуви')) ?>:</label></td>
                         <td><input class="tx" type="text" name="volumes_shoes" value="<?php echo $this->form->volumes_shoes->getValue() ?>"></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Образование:</label></td>
+                        <td><label><?= $this->translate(_('Образование')) ?>:</label></td>
                         <td><input class="tx" type="text" name="education" value="<?php echo $this->form->education->getValue() ?>"></td>
                     </tr>
                 </table>
             </div>
 
             <div class="form_page_lang">
-                <label>Знание иностранных языков:</label>
+                <label><?= $this->translate(_('Знание иностранных языков')) ?>:</label>
                 <div class="form_lang">
-                    <label>Язык</label>
+                    <label><?= $this->translate(_('Язык')) ?></label>
                     <input class="tx" type="text" value="<?= $this->form->language_1->getValue() ?>" name="language_1">
                 </div>
                 <div class="form_lang">
-                    <label>Уровень владения</label>
+                    <label><?= $this->translate(_('Уровень владения')) ?></label>
                     <div class="sell"  style="width: 168px;">
                         <select class="styled" name="language_1_level">
-                            <option value="0" <?= $this->form->language_1_level->getValue() == '0' ? 'selected' : '' ?>>низкий</option>
-                            <option value="1" <?= $this->form->language_1_level->getValue() == '1' ? 'selected' : '' ?>>средний</option>
-                            <option value="2" <?= $this->form->language_1_level->getValue() == '2' ? 'selected' : '' ?>>высокий</option>
+                            <option value="0" <?= $this->form->language_1_level->getValue() == '0' ? 'selected' : '' ?>><?= $this->translate(_('низкий')) ?></option>
+                            <option value="1" <?= $this->form->language_1_level->getValue() == '1' ? 'selected' : '' ?>><?= $this->translate(_('средний')) ?></option>
+                            <option value="2" <?= $this->form->language_1_level->getValue() == '2' ? 'selected' : '' ?>><?= $this->translate(_('высокий')) ?></option>
                         </select>
                     </div>
                 </div>
                 <div class="form_lang">
-                    <label>Язык</label>
+                    <label><?= $this->translate(_('Язы')) ?>к</label>
                     <input class="tx" type="text" value="<?= $this->form->language_2->getValue() ?>" name="language_2">
                 </div>
                 <div class="form_lang">
-                    <label>Уровень владения</label>
+                    <label><?= $this->translate(_('Уровень владения')) ?></label>
                     <div class="sell"  style="width: 168px;">
                         <select class="styled" name="language_2_level">
-                            <option value="0" <?= $this->form->language_2_level->getValue() == '0' ? 'selected' : '' ?>>низкий</option>
-                            <option value="1" <?= $this->form->language_2_level->getValue() == '1' ? 'selected' : '' ?>>средний</option>
-                            <option value="2" <?= $this->form->language_2_level->getValue() == '2' ? 'selected' : '' ?>>высокий</option>
+                            <option value="0" <?= $this->form->language_2_level->getValue() == '0' ? 'selected' : '' ?>><?= $this->translate(_('низкий')) ?></option>
+                            <option value="1" <?= $this->form->language_2_level->getValue() == '1' ? 'selected' : '' ?>><?= $this->translate(_('средний')) ?></option>
+                            <option value="2" <?= $this->form->language_2_level->getValue() == '2' ? 'selected' : '' ?>><?= $this->translate(_('высокий')) ?></option>
                         </select>
                     </div>
                 </div>
             </div>
 
             <div class="form_check">
-                <label>Ваши цели:</label>
+                <label><?= $this->translate(_('Ваши цели')) ?>:</label>
                 <div class="form_check_box">
                     <div class="chbox" id="goal_1">
                         <input type="checkbox" id="goal_1" name="goal_1" class="styled" <?= $this->form->goal_1->getValue() ? 'checked' : ''?>>
-                        <label>Мастер-классы</label>
+                        <label><?= $this->translate(_('Мастер-классы')) ?></label>
                     </div>
                     <div class="chbox" id="goal_2">
                         <input type="checkbox" id="goal_2" name="goal_2" class="styled" <?= $this->form->goal_2->getValue() ? 'checked' : ''?>>
-                        <label>Промо-акции</label>
+                        <label><?= $this->translate(_('Промо-акции')) ?></label>
                     </div>
                     <div class="chbox" id="goal_3">
                         <input type="checkbox" id="goal_3" name="goal_3" class="styled" <?= $this->form->goal_3->getValue() ? 'checked' : ''?>>
-                        <label>Съемки для катологов</label>
+                        <label><?= $this->translate(_('Съемки для катологов')) ?></label>
                     </div>
                     <div class="chbox" id="goal_4">
                         <input type="checkbox" id="goal_4" name="goal_4" class="styled" <?= $this->form->goal_4->getValue() ? 'checked' : ''?>>
-                        <label>Съемки в киносериалах</label>
+                        <label><?= $this->translate(_('Съемки в киносериалах')) ?></label>
                     </div>
                     <div class="chbox" id="goal_5">
                         <input type="checkbox" id="goal_5" name="goal_5" class="styled" <?= $this->form->goal_5->getValue() ? 'checked' : ''?>>
-                        <label>Съемки в рекламе</label>
+                        <label><?= $this->translate(_('Съемки в рекламе')) ?></label>
                     </div>
                     <div class="chbox" id="goal_6">
                         <input type="checkbox" id="goal_6" name="goal_6" class="styled" <?= $this->form->goal_6->getValue() ? 'checked' : ''?>>
-                        <label>Вокальные, танцевальные
-                            или другие проекты</label>
+                        <label><?= $this->translate(_('Вокальные, танцевальные
+                            или другие проекты')) ?></label>
                     </div>
                 </div>
 
@@ -142,99 +161,99 @@
                 <div class="form_check_box">
                     <div class="chbox" id="goal_7">
                         <input type="checkbox" id="goal_7" name="goal_7" class="styled" <?= $this->form->goal_7->getValue() ? 'checked' : ''?>>
-                        <label>Fashion показы, defile</label>
+                        <label><?= $this->translate(_('Fashion показы, defile')) ?></label>
                     </div>
                     <div class="chbox" id="goal_8">
                         <input type="checkbox" id="goal_8" name="goal_8" class="styled" <?= $this->form->goal_8->getValue() ? 'checked' : ''?>>
-                        <label>Презентации и выставки</label>
+                        <label><?= $this->translate(_('Презентации и выставки')) ?></label>
                     </div>
                     <div class="chbox" id="goal_9">
                         <input type="checkbox" id="goal_9" name="goal_9" class="styled" <?= $this->form->goal_9->getValue() ? 'checked' : ''?>>
-                        <label>Съемки для журналов</label>
+                        <label><?= $this->translate(_('Съемки для журналов')) ?></label>
                     </div>
                     <div class="chbox" id="goal_10">
                         <input type="checkbox" id="goal_10" name="goal_10" class="styled" <?= $this->form->goal_10->getValue() ? 'checked' : ''?>>
-                        <label>Съемки в клипах</label>
+                        <label><?= $this->translate(_('Съемки в клипах')) ?></label>
                     </div>
                     <div class="chbox" id="goal_11">
                         <input type="checkbox" id="goal_11" name="goal_11" class="styled" <?= $this->form->goal_11->getValue() ? 'checked' : ''?>>
-                        <label>Работа переводчиком</label>
+                        <label><?= $this->translate(_('Работа переводчиком')) ?></label>
                     </div>
                 </div>
 
             </div>
 
-            <label>Профессиональный статус:</label>
+            <label><?= $this->translate(_('Профессиональный статус')) ?>:</label>
             <div class="form_check">
 
                 <div class="form_check_box">
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Профессиональный актер</label>
+                    <div class="chbox" id="prof_1">
+                        <input type="checkbox" id="prof_1" name="prof_1" class="styled" <?= $this->form->prof_1->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Профессиональный актер')) ?></label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Начинающий актер</label>
+                    <div class="chbox" id="prof_2">
+                        <input type="checkbox" id="prof_2" name="prof_2" class="styled" <?= $this->form->prof_2->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Начинающий актер')) ?></label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Телеведущий, радиоведущий</label>
+                    <div class="chbox" id="prof_3">
+                        <input type="checkbox" id="prof_3" name="prof_3" class="styled" <?= $this->form->prof_3->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Телеведущий, радиоведущий')) ?></label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Артист эстрады</label>
+                    <div class="chbox" id="prof_4">
+                        <input type="checkbox" id="prof_4" name="prof_4" class="styled" <?= $this->form->prof_4->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Артист эстрады')) ?></label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Фотомодель, модель подиума</label>
+                    <div class="chbox" id="prof_5">
+                        <input type="checkbox" id="prof_5" name="prof_5" class="styled" <?= $this->form->prof_5->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Фотомодель, модель подиума')) ?></label>
                     </div>
                 </div>
 
                 <div class="form_check_box">
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Конферансье</label>
+                    <div class="chbox" id="prof_6">
+                        <input type="checkbox" id="prof_6" name="prof_6" class="styled" <?= $this->form->prof_6->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Конферансье')) ?></label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Каскадер</label>
+                    <div class="chbox" id="prof_7">
+                        <input type="checkbox" id="prof_7" name="prof_7" class="styled" <?= $this->form->prof_7->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Каскадер')) ?></label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Танцовщик / Танцовщица</label>
+                    <div class="chbox" id="prof_8">
+                        <input type="checkbox" id="prof_8" name="prof_8" class="styled" <?= $this->form->prof_8->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Танцовщик / Танцовщица')) ?></label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Начинающий</label>
+                    <div class="chbox" id="prof_9">
+                        <input type="checkbox" id="prof_9" name="prof_9" class="styled" <?= $this->form->prof_9->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Начинающий')) ?></label>
                     </div>
-                    <div class="chbox">
-                        <input type="checkbox" class="styled" checked>
-                        <label>Переводчик</label>
+                    <div class="chbox" id="prof_10">
+                        <input type="checkbox" id="prof_10" name="prof_10" class="styled" <?= $this->form->prof_10->getValue() ? 'checked' : ''?>>
+                        <label><?= $this->translate(_('Переводчик')) ?></label>
                     </div>
                 </div>
 
             </div>
 
             <div class="txar_box">
-                <label>Опыт работы на выставках,
+                <label><?= $this->translate(_('Опыт работы на выставках,
                     презентациях, съемках и
                     т.д. (укажите наиболее
-                    интересные проекты):</label>
-                <textarea rows="5" cols="5"></textarea>
+                    интересные проекты)')) ?>:</label>
+                <textarea rows="5" cols="5" name="experience"><?= $this->form->experience->getValue() ?></textarea>
             </div>
             <div class="txar_box">
-                <label>Укажите в данном пункте
+                <label><?= $this->translate(_('Укажите в данном пункте
                     ваш стиль танцев (для
-                    танцовщиц):</label>
-                <textarea rows="5" cols="5"></textarea>
+                    танцовщиц)')) ?>:</label>
+                <textarea rows="5" cols="5" name="style"><?= $this->form->style->getValue() ?></textarea>
             </div>
             <div class="txar_box">
-                <label>Личные качества,
-                    выделяющие вас:</label>
-                <textarea rows="5" cols="5"></textarea>
+                <label><?= $this->translate(_('Личные качества,
+                    выделяющие вас')) ?>:</label>
+                <textarea rows="5" cols="5" name="quality"><?= $this->form->quality->getValue() ?></textarea>
             </div>
 
-            <label>Фотографии:</label>
+            <label><?= $this->translate(_('Фотографии')) ?>:</label>
             <ul class="form_photo">
                 <?php
                     if($this->profile->photos) {
@@ -242,14 +261,14 @@
                             echo '
                                 <li id="photo' . $photo->id . '">
                                     ' . $this->photo($photo, 3) . '
-                                    <a href="#" onclick="deleteImage(' . $photo->id . ', \'photo' . $photo->id . '\'); return false;" class="delete">Удалить</a>
+                                    <a href="#" onclick="deleteImage(' . $photo->id . ', \'photo' . $photo->id . '\'); return false;" class="delete">' . $this->translate(_('Удалить')) . '</a>
                                 </li>
                             ';
                         }
                     }
                 ?>
             </ul>
-
+            <?php endif; ?>
             <div id="images">
                 <input name="MAX_FILE_SIZE" value="8388608" id="MAX_FILE_SIZE" type="hidden">
                 <div class="load_photo_box" id="file-1" style="display: none;">
@@ -316,31 +335,32 @@
                     </div>
                 </div>
             </div>
-            <span class="add_photo">+ <a href="#" onclick="addFileform(); return false;">добавить фото</a></span>
-
+            <?php if($this->user->account_type == 1 || $this->user->account_type == 2) : ?>
+            <span class="add_photo">+ <a href="#" onclick="addFileform(); return false;"><?= $this->translate(_('добавить фото')) ?></a></span>
+            <?php endif; ?>
 
             <div class="form_page_pass">
-                <label>Изменить пароль:</label>
+                <label><?= $this->translate(_('Изменить пароль')) ?>:</label>
                 <table>
                     <tr>
-                        <td><label>Текущий пароль:</label></td>
-                        <td><input class="tx tx11" type="password" value=""></td>
+                        <td><label><?= $this->translate(_('Текущий пароль')) ?>:</label></td>
+                        <td><input class="tx tx11" type="password" name="cur_password" value=""></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Новый пароль:</label></td>
-                        <td><input class="tx tx11" type="password" value=""></td>
+                        <td><label><?= $this->translate(_('Новый пароль')) ?>:</label></td>
+                        <td><input class="tx tx11" type="password" name="new_password" value=""></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label>Повторите пароль:</label></td>
-                        <td><input class="tx tx11" type="password" value=""></td>
+                        <td><label><?= $this->translate(_('Повторите пароль')) ?>:</label></td>
+                        <td><input class="tx tx11" type="password" name="new_password1" value=""></td>
                     </tr>
                 </table>
             </div>
-            <input class="btn_save" type="submit" value="Сохранить">
+            <input class="btn_save" type="submit" value="<?= $this->translate(_('Сохранить')) ?>">
 
         </div>
     </form>

@@ -37,7 +37,7 @@ class Zend_View_Helper_Companieslist
             }
         }
         else {
-            $list .= 'Пока нет скидок в этой категории';
+            $list .= $this->view->translate(_('Пока нет скидок в этой категории'));
         }
 
         $list .= '</ul>';

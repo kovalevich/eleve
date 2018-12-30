@@ -7,6 +7,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     protected $options;
 
     public function _initAaa() {
+
         $this->_frontController = Zend_Controller_Front::getInstance();
         $this->_config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/config.ini');
         Zend_Registry::set('_config', $this->_config);
@@ -107,8 +108,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     
     protected function _initTranslate()
     {
-        $translate = new Zend_Translate($this->options->resources->translate);
-        Zend_Registry::set('Zend_Translate', $translate);
+        $this->_frontController->registerPlugin(new Application_Plugin_Locale());
     }
     
     protected function _initPlugins()

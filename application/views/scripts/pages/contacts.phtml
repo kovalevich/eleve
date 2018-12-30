@@ -1,37 +1,37 @@
 <div class="content_box">
-    <h1>Contacts:</h1>
+    <h1><?= $this->translate(_('Contacts')) ?>:</h1>
 
     <div class="contacts">
-        <p>Номера телефонов:</p>
+        <p><?= $this->translate(_('Номера телефонов')) ?>:</p>
         <span class="phone">+000 00 000 00 00, менеджер</span>
         <span class="phone">+000 00 000 00 00, менеджер.</span>
         <ul class="list_contacts">
-            <li>Отдел управления персоналом: <a href="#">hr@eleve.fr</a></li>
-            <li>Отдел рекламы и маркетинга: <a href="#">marketing@eleve.fr</a></li>
-            <li>Отдел по работе с партнерами: <a href="#">partners@eleve.fr</a></li>
-            <li>Отдел по работе с клиентами: <a href="#">clients@eleve.fr</a></li>
-            <li>Финансовый отдел: <a href="#">finance@eleve.fr</a></li>
+            <li><?= $this->translate(_('Отдел управления персоналом')) ?>: <a href="#">hr@eleve.fr</a></li>
+            <li><?= $this->translate(_('Отдел рекламы и маркетинга')) ?>: <a href="#">marketing@eleve.fr</a></li>
+            <li><?= $this->translate(_('Отдел по работе с партнерами')) ?>: <a href="#">partners@eleve.fr</a></li>
+            <li><?= $this->translate(_('Отдел по работе с клиентами')) ?>: <a href="#">clients@eleve.fr</a></li>
+            <li><?= $this->translate(_('Финансовый отдел')) ?>: <a href="#">finance@eleve.fr</a></li>
         </ul>
     </div>
 
     <form method="post">
         <div class="form_qwestion">
-            <h2>Задать вопрос:</h2>
+            <h2><?= $this->translate(_('Задать вопрос')) ?>:</h2>
             <table>
                 <tr>
-                    <td><label>Представьтесь, пожалуйста:</label></td>
+                    <td><label><?= $this->translate(_('Представьтесь, пожалуйста')) ?>:</label></td>
                     <td><input class="<?php echo count($this->errors['name']) ? 'input-error ' : ''?>tx" type="text" name="name" value="<?php echo $this->form->name->getValue() ?>"></td>
                 </tr>
             </table>
             <table>
                 <tr>
-                    <td><label>Контактный телефон:</label></td>
+                    <td><label><?= $this->translate(_('Контактный телефон')) ?>:</label></td>
                     <td><input class="<?php echo count($this->errors['phone']) ? 'input-error ' : ''?>tx tx1" type="text" name="phone" value="<?php echo $this->form->phone->getValue() ?>"></td>
                 </tr>
             </table>
             <table>
                 <tr>
-                    <td><label>Ваш e-mail:</label></td>
+                    <td><label><?= $this->translate(_('Ваш e-mail')) ?>:</label></td>
                     <td><input class="<?php echo count($this->errors['email']) ? 'input-error ' : ''?>tx tx2" type="text" name="email" value="<?php echo $this->form->email->getValue() ?>"></td>
                 </tr>
             </table>
@@ -47,9 +47,9 @@
 
 
             </div>
-            <label>Текст сообщения:</label>
+            <label><?= $this->translate(_('Текст сообщения')) ?>:</label>
             <textarea rows="5" class="<?php echo count($this->errors['text']) ? 'input-error ' : ''?>" name="text" cols="5"><?php echo $this->form->text->getValue() ?></textarea>
-            <input class="btn_form_qwestion" type="submit" value="Отправить вопрос">
+            <input class="btn_form_qwestion" type="submit" value="<?= $this->translate(_('Отправить вопрос')) ?>">
         </div>
     </form>
 </div>

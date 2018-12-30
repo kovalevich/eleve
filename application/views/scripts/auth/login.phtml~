@@ -1,0 +1,29 @@
+<div class="main-wrapp">
+    <div class="content">
+        <div class="articles">
+			<div style="float: left; width: 50%;">
+				<h1>Войти</h1>
+				<?php
+					echo $this->errMessage;
+					echo $this->form;
+				?>
+				<br>
+				<a href="/forgotpass">Забыли пароль?</a>
+			</div>
+			<div style="float: left; width: 50%;">
+				<h1>Регистрация</h1>
+				
+				<form action="/registration" enctype="multipart/form-data" method="post" "<?php echo $this->form_r->getAttrib('class')?>">
+					<?php echo $this->form_r->email ?>
+					<?php echo $this->form_r->name ?>
+					<?php echo $this->form_r->phone ?>
+					<?php echo $this->form_r->city ?>
+					<?php echo $this->form_r->registration ?>
+				</form>
+			</div>
+        </div>
+    </div>
+			<script type="text/javascript">
+				$("#phone").mask("999 (99) 999-99-99");
+            </script>
+</div>

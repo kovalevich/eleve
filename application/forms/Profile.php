@@ -5,8 +5,8 @@ class Application_Form_Profile extends Application_Form_Form
 
     public function init()
     {
-        $this->setName('registration');
-        $this->setAction('registration');
+        $this->setName('profile');
+        $this->setAction('profile');
         $this->setEnctype(Zend_Form::ENCTYPE_MULTIPART);
 
 
@@ -87,7 +87,25 @@ class Application_Form_Profile extends Application_Form_Form
         $images = new Zend_Form_Element_File('images');
         $images->setDestination(APPLICATION_UPLOADS_DIR)
             ->addValidator('Extension', false, 'jpg,png')
-            ->setMultiFile(2);
+            ->setMultiFile(7);
+
+        $this->addElement('text', 'experience', array(
+            'filters'       => array(
+                'StripTags', 'StripTags'
+            )
+        ));
+
+        $this->addElement('text', 'quality', array(
+            'filters'       => array(
+                'StripTags', 'StripTags'
+            )
+        ));
+
+        $this->addElement('text', 'style', array(
+            'filters'       => array(
+                'StripTags', 'StripTags'
+            )
+        ));
 
         $this->addElement('text', 'goal_1', array());
         $this->addElement('text', 'goal_2', array());
@@ -100,6 +118,17 @@ class Application_Form_Profile extends Application_Form_Form
         $this->addElement('text', 'goal_9', array());
         $this->addElement('text', 'goal_10', array());
         $this->addElement('text', 'goal_11', array());
+
+        $this->addElement('text', 'prof_1', array());
+        $this->addElement('text', 'prof_2', array());
+        $this->addElement('text', 'prof_3', array());
+        $this->addElement('text', 'prof_4', array());
+        $this->addElement('text', 'prof_5', array());
+        $this->addElement('text', 'prof_6', array());
+        $this->addElement('text', 'prof_7', array());
+        $this->addElement('text', 'prof_8', array());
+        $this->addElement('text', 'prof_9', array());
+        $this->addElement('text', 'prof_10', array());
 
         $submit = new Zend_Form_Element_Submit('registration');
         $submit->setLabel($this->getTranslator()->translate('registration'));

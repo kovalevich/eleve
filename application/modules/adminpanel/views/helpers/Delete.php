@@ -56,6 +56,11 @@ class Zend_View_Helper_Delete
                 $url = $this->view->url(array('id'=>$obj->id), 'deletecommunication');
                 break;
             }
+            case 'casting': {
+                $text = sprintf("Удалить кастинг %s безвозвратно?", $filter->filter($obj->title));
+                $url = $this->view->url(array('id'=>$obj->id), 'deletecasting');
+                break;
+            }
         }
         
         $html = '<a href="#" onClick="Confirm(\'' . $text . '\', \'' . $url . '\')"><span class="glyphicon glyphicon-trash"></span></a>';

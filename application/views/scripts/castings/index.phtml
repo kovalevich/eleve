@@ -1,0 +1,24 @@
+<div class="content_box">
+    <h1><?= $this->translate(_('Castings')) ?>:</h1>
+    <?php echo $this->castingslist ($this->castings, true) ?>
+    <?= $this->paginator ?>
+
+
+    <?php if($this->user1->account_type == 0 && $this->user1->account_status == 1) : ?>
+    <form method="post">
+        <div class="form_qwestion">
+            <h2><?= $this->translate(_('Добавить кастинг')) ?>:</h2>
+            <table>
+                <tr>
+                    <td><label><?= $this->translate(_('Название кастинга')) ?>:</label></td>
+                    <td><input class="<?php echo count($this->errors['title']) ? 'input-error ' : ''?>tx" type="text" name="title" value="<?php echo $this->form->title->getValue() ?>"></td>
+                </tr>
+            </table>
+            <label><?= $this->translate(_('Описание')) ?>:</label>
+            <textarea rows="5" class="<?php echo count($this->errors['text']) ? 'input-error ' : ''?>" name="text" cols="5"><?php echo $this->form->text->getValue() ?></textarea>
+            <input class="btn_form_qwestion" type="submit" value="<?= $this->translate(_('Добавить кастинг')) ?>">
+        </div>
+    </form>
+    <?php endif; ?>
+
+</div>

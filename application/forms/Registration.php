@@ -47,6 +47,20 @@ class Application_Form_Registration extends Application_Form_Form
         ->addFilter('StringTrim')
         ->setAttrib('id', 'phone')
         ->addValidator('NotEmpty');
+
+        $this->addElement('text', 'passport', array(
+            'class'         => 'form-control',
+            'filters'       => array(
+                'StripTags', 'StripTags'
+            )
+        ));
+
+        $this->addElement('text', 'date_passport', array(
+            'class'         => 'form-control',
+            'filters'       => array(
+                'StripTags', 'StripTags'
+            )
+        ));
         
         // создаём текстовый элемент
         $city = new Zend_Form_Element_Text('address');

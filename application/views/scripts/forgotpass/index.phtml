@@ -1,10 +1,9 @@
 <div class="main-wrapp">         
     <div class="content">
         <div class="articles">
-            <h1>Забыли пароль?</h1>
-            <?php if ($this->form) :?>
-                Введите ваш email и мы вышлем вам новый пароль для входа в кабинет
-            <?php echo $this->form; endif;?>
+            <h1><?= $this->translate(_('Забыли пароль?')) ?></h1>
+<?= $this->translate(_('Введите ваш email и мы вышлем вам новый пароль для входа в кабинет')) ?>
+
             <p><?php echo $this->mess ?></p>
         </div>
     </div>

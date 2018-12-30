@@ -1,0 +1,349 @@
+AWSTATS DATA FILE 7.1 (build 1.983)
+# If you remove this file, all statistics for date 201407 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.eleve.by.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1988                
+POS_TIME 2647                
+POS_VISITOR 6744                
+POS_DAY 8579                
+POS_DOMAIN 3425                
+POS_LOGIN 3657                
+POS_ROBOT 3812                
+POS_WORMS 4118                
+POS_EMAILSENDER 4249                
+POS_EMAILRECEIVER 4392                
+POS_SESSION 9293                
+POS_SIDER 9499                
+POS_FILETYPES 4527                
+POS_DOWNLOADS 4705                
+POS_OS 4753                
+POS_BROWSER 4896                
+POS_SCREENSIZE 5136                
+POS_UNKNOWNREFERER 5210                
+POS_UNKNOWNREFERERBROWSER 5347                
+POS_ORIGIN 5479                
+POS_SEREFERRALS 5617                
+POS_PAGEREFS 5761                
+POS_SEARCHWORDS 5936                
+POS_KEYWORDS 6088                
+POS_MISC 2311                
+POS_ERRORS 6147                
+POS_CLUSTER 3513                
+POS_SIDER_404 6261                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20140801163407 1 0 12119759601763
+FirstTime 0
+LastTime 20140731183709
+LastUpdate 20140801170436 1 0 0 0 0
+TotalVisits 67                  
+TotalUnique 43                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 43                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 326 328 2850530 767 769 4996660
+1 84 95 680380 13 25 86612
+2 19 30 132043 6 14 871310
+3 44 57 1235558 10 42 235513
+4 0 0 0 17 26 105128
+5 10 15 3562905 11 24 63249
+6 13 13 87832 11 24 6401788
+7 5 16 177025 14 18 70710
+8 4 15 172129 5 16 106071
+9 1 3 11153 7 11 55294
+10 0 0 0 10 11 47925
+11 0 0 0 19 24 165792
+12 4 13 23936 10 13 67972
+13 5 20 181589 8 16 134573
+14 26 37 319458 19 30 133436
+15 12 33 1174017 14 50 189945
+16 2 6 37383 17 29 142814
+17 30 44 1157211 17 31 927004
+18 5 25 315378 16 20 100093
+19 24 34 157931 8 13 59050
+20 26 37 316411 14 20 60396
+21 56 89 2428453 18 28 863952
+22 18 53 424678 12 22 49396
+23 95 129 1062238 13 22 55168
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 809 1092 16508238
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 5
+googlebot 255 10531149 20140731012909 0
+yandex 8 51536 20140725081108 0
+surveybot 2 9536 20140724041117 0
+no_user_agent 1 0 20140702053336 0
+proximic 1 4768 20140701233533 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 6
+css 84 502099 0 0
+ttf 1 811052 0 0
+js 127 2661395 0 0
+woff 9 6494016 0 0
+Unknown 799 5948240 0 0
+gif 72 91436 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 5
+linuxandroid 51 26
+winxp 43 13
+linuxubuntu 34 15
+Unknown 294 294
+win7 670 461
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 8
+chrome35.0.1916.153 140 37
+chrome34.0.1847.116 34 15
+chrome34.0.1847.131 157 90
+chrome33.0.1750.154 353 329
+chrome36.0.1985.125 34 12
+Unknown 294 294
+opera9.80 29 6
+chrome26.0.1410.58 51 26
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 1
+sqlmap/1.0-dev_(http://sqlmap.org) 20140710002512
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+sqlmap/1.0-dev_(http://sqlmap.org) 20140710002512
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 332 332
+From1 0 0
+From2 0 0
+From3 2 2
+From4 475 758
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 1
+http://vk.com/away.php 2 2
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+302 71 0
+500 765 4992594
+404 89 400268
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 5
+/apple-touch-icon-precomposed.png 20 -
+/styles/fancy_close.png 1 http://eleve.by/news
+/robots.txt 47 -
+/apple-touch-icon.png 20 -
+/styles/fancybox.png 1 http://eleve.by/news
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 43
+178.122.146.181 304 305 2717121 20140710002512
+37.214.191.169 108 109 695694 20140718021625
+37.214.189.4 74 95 1452031 20140716034034
+37.214.146.118 61 86 4987906 20140721061919
+37.214.172.24 43 43 261787 20140705015031
+37.214.101.16 27 28 186086 20140708141852
+37.214.127.16 24 25 162699 20140709204803
+37.214.99.16 19 30 275667 20140718214657
+37.214.124.181 18 18 119553 20140702000121
+37.214.86.15 17 17 114921 20140716214451
+37.214.83.100 1 5 32615 20140719160211
+37.212.93.7 5 16 177025 20140722221335
+37.214.93.203 3 5 24061 20140725055444
+178.121.151.9 1 2 4768 20140709205718
+37.214.189.152 2 2 13376 20140705144831
+178.122.242.1 2 11 958504 20140716210456
+37.212.69.218 7 18 189933 20140728212644
+37.214.175.101 3 5 24061 20140723171910
+178.122.186.198 3 12 12908 20140707192239
+178.121.74.95 7 20 42018 20140718015759
+37.212.96.174 5 16 177025 20140706072209
+37.212.86.127 5 16 177025 20140714225157
+37.214.126.209 1 10 5236 20140706225734
+86.57.191.27 3 3 18612 20140716173443
+37.214.102.221 1 5 27879 20140722221839
+37.212.157.190 4 15 172129 20140719083037
+37.214.165.116 1 10 146880 20140728150511
+37.214.111.188 1 1 5236 20140707145806
+37.212.77.46 3 14 163141 20140715142156
+178.121.149.223 2 3 817237 20140727174120
+37.212.101.76 3 14 163141 20140712184609
+37.214.76.200 1 3 11153 20140725091404
+37.214.91.8 13 24 232182 20140727035018
+178.124.201.163 3 18 166849 20140709134524
+37.212.15.112 5 16 177025 20140704233917
+37.212.162.194 4 15 172129 20140709234334
+37.214.108.144 1 1 8140 20140717141408
+37.214.109.48 1 10 146752 20140731183709
+37.214.83.81 2 3 18724 20140704150705
+37.212.22.216 5 16 177025 20140702233748
+37.214.149.220 12 13 85377 20140710202651
+178.121.188.56 2 12 972383 20140717214738
+37.214.169.156 2 2 14224 20140703223212
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 28
+20140701 16 16 108832 1
+20140702 7 18 187746 2
+20140703 2 2 14224 2
+20140704 21 33 292032 4
+20140705 31 31 178880 3
+20140706 6 26 182261 2
+20140707 12 22 74149 3
+20140708 19 19 130081 1
+20140709 32 60 506445 5
+20140710 316 318 2802498 2
+20140712 3 14 163141 1
+20140713 29 29 191118 2
+20140714 9 29 204333 3
+20140715 24 36 314845 4
+20140716 42 62 2173938 6
+20140717 50 61 1266899 3
+20140718 87 111 727003 4
+20140719 5 20 204744 2
+20140720 11 22 1022637 2
+20140721 50 64 3965269 3
+20140722 6 21 204904 2
+20140723 3 5 24061 1
+20140724 1 1 8140 1
+20140725 3 7 27074 2
+20140726 2 13 158622 1
+20140727 13 14 890797 2
+20140728 8 28 336813 2
+20140731 1 10 146752 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 5
+5mn-15mn 6
+0s-30s 31
+15mn-30mn 8
+30s-2mn 9
+2mn-5mn 4
+30mn-1h 4
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 18
+/catalog 360 3235696 3 6
+/registration 102 830280 13 16
+/discounts 97 507892 10 12
+/news 80 381440 32 9
+/communications 63 308448 4 9
+/career 43 408672 3 7
+/contacts 31 170035 1 3
+/fonts/calibri.woff 9 6494016 0 3
+/discounts/all 4 18108 0 0
+/discounts/12 3 13581 0 0
+/discounts/11 2 9054 0 0
+/discounts/5 2 9054 0 0
+/discounts/8 2 9054 0 1
+/fonts/calibri.ttf 1 811052 0 0
+/discounts/10 1 4527 0 0
+/news/id/2 3 15237 0 1
+/discounts/9 3 13581 1 0
+/discounts/13 3 13581 0 0
+END_SIDER

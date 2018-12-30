@@ -47,6 +47,7 @@ class Application_Form_Category extends Application_Form_Form
         $category->addMultiOption('articles', 'articles');
         $category->addMultiOption('communications', 'communications');
         $category->addMultiOption('discounts', 'discounts');
+        $category->addMultiOption('castings', 'castings');
     }
 
 

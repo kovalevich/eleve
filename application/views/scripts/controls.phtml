@@ -1,10 +1,10 @@
-<?php if ($this->pageCount): ?>
-<div class="pagination">
-
+<?php if ($this->pageCount > 1): ?>
+<div class="pagination" style="margin-top: 15px;">
+<span><?= $this->translate(_('Страницы')) ?>: </span>
 <?php foreach ($this->pagesInRange as $page): ?>
     
       <?php if ($page != $this->current): ?>
-    	<a href="<?php echo $this->url(array('page' => $page)); ?>">
+    	<a href="<?php echo $this->url(array('page' => $page)) . $this->getparams(); ?>">
     		<?php echo $page; ?>
     	</a>
       <?php else: ?>

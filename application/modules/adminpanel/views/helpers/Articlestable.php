@@ -46,7 +46,7 @@ class Zend_View_Helper_Articlestable
                         <tr>
                             <td>' . $entry->id . '</td>
         	                <td>' . $entry->title . '</td>
-                            <td><a href="/articles/' . $entry->category->id . '/' . $entry->id . '.html">/articles/' . $entry->category->id . '/' . $entry->id . '.html</a></td>
+                            <td><a href="/pages/' . $entry->id . '">/pages/' . $entry->id . '</a></td>
                             <td>' . $entry->category->title . '</td>
                             <td>
                                 ' . $this->view->edit('article', $entry) . '

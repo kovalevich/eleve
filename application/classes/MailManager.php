@@ -28,9 +28,9 @@ class Classes_MailManager
             ->setSubject($subject)
             ->send();
         }catch (Zend_Mail_Exception $e){
-			//����� ������ � ����
+
 		}catch (Zend_Mail_Transport_Exception $e){
-			//����� ������ � ����
+
 		}
         
     }

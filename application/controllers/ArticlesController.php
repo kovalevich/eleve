@@ -34,8 +34,9 @@ class ArticlesController extends Zend_Controller_Action
 
         	if ($category->id) {
                 $model = new Models_Articles_Mapper();
-                $articles = $model->getArticles($category->id, 10);
-        		$this->view->articles = $articles;
+                $paginator = $model->getPage($category->id, $this->getParam('page'));
+        		$this->view->articles = $model->convertRows($paginator);
+                $this->view->paginator = $paginator;
         		$this->view->category = $category;
         	}
         	else {

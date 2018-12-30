@@ -42,7 +42,7 @@ class Application_Plugin_AccessCheck extends Zend_Controller_Plugin_Abstract
         // то отсылаем его на страницу авторизации
         if (!$this->_acl->isAllowed($role, $resource, $action)) {
         	if ($role != 'guest')
-        		$request->setModuleName('default')->setControllerName('auth')->setActionName('noaccess');
+        		$request->setModuleName('default')->setControllerName('index')->setActionName('index');
         	else {
         		$request->setModuleName('default')->setControllerName('auth')->setActionName('login');
         	}

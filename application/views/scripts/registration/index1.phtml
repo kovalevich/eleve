@@ -1,0 +1,108 @@
+﻿<div class="content_box">
+    <form method="post">
+        <div class="form_page">
+            <div class="form_page_data">
+               	<table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Цели')) ?>:</label></td>
+                        <td>
+                            <div class="sell">
+                                <select class="styled" name="account_type" id="check_type">
+                                    <option value="0"><?= $this->translate(_('публикация кастингов и поиск людей')) ?></option>
+                                    <option value="1"><?= $this->translate(_('участие в кастингах и размещение анкеты')) ?></option>
+                                    <option value="3"><?= $this->translate(_('регистрация в дисконтном клубе')) ?></option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+				<table id="type_account" style="display: none;">
+                    <tr>
+                        <td><label><?= $this->translate(_('Тип')) ?>:</label></td>
+                        <td>
+                            <div class="sell">
+                                <select class="styled" name="account_type1">
+                                    <option value="0"><?= $this->translate(_('3 месяца')) ?></option>
+                                    <option value="1"><?= $this->translate(_('6 месяцев')) ?></option>
+                                    <option value="2"><?= $this->translate(_('12 месяцев')) ?></option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table id="type_account_discount" style="display: none;">
+                    <tr>
+                        <td><label><?= $this->translate(_('Тип')) ?>:</label></td>
+                        <td>
+                            <div class="sell">
+                                <select class="styled" name="account_type_discount">
+                                    <option value="0"><?= $this->translate(_('ELEFE Discounts (бесплатно)')) ?></option>
+                                    <option value="1"><?= $this->translate(_('ELEFE Discounts Platinum (2 100 000 рублей)')) ?></option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+				<table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Фамилия и имя')) ?>:</label></td>
+                        <td><input class="tx" type="text" value="" name="name"></td>
+                    </tr>
+                </table>                
+			   <table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Дата рождения')) ?>:</label></td>
+                        <td><input class="tx" type="text" value="" name="date_brit"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Серия и номер паспорта')) ?>:</label></td>
+                        <td><input class="tx" type="text" value="" name="passport"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Кем и когда выдан')) ?>:</label></td>
+                        <td><input class="tx" type="text" value="" name="date_passport"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Фактическое место <br> жительства (адрес)')) ?>:</label></td>
+                        <td><textarea rows="5" cols="5" name="address"></textarea></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Номер телефона')) ?>:</label></td>
+                        <td><input class="tx" type="text" value="" name="phone"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label><?= $this->translate(_('Адрес e-mail')) ?>:</label></td>
+                        <td><input class="tx" type="text" value="" name="email"></td>
+                    </tr>
+                </table>
+            </div>
+            <table>
+                <tr>
+                    <td><label><?= $this->translate(_('Фамилия и имя реферала')) ?>:</label></td>
+                    <td><input class="tx" type="text" value="" name="ref"></td>
+                </tr>
+            </table>
+
+
+
+            <div class="chbox chbox_main">
+                <input type="checkbox" class="styled" id="getnews" name="getnews" checked>
+                <label id="label"><?= $this->translate(_('Да, я хочу получать новости и уведомления об акциях и закрытых
+                    рапсродажах для держателей дисконтной карты')) ?>.</label>
+            </div>
+            <input class="btn_save" type="submit" value="<?= $this->translate(_('Зарегистрироваться')) ?>">
+
+        </div>
+    </form>
+
+</div>

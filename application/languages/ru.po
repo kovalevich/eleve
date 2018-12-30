@@ -1,0 +1,749 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: eleve\n"
+"POT-Creation-Date: 2014-05-05 11:42+0300\n"
+"PO-Revision-Date: 2014-08-15 22:42+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /home/evgen/sites/eleve.kov/\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: application/views\n"
+
+#: application/views/helpers/Companieslist.php:40
+msgid "Пока нет скидок в этой категории"
+msgstr "sdfghjklkjhg"
+
+#: application/views/helpers/Castingslist.php:35
+msgid "Отметили"
+msgstr ""
+
+#: application/views/helpers/Castingslist.php:36
+msgid "Отметить"
+msgstr ""
+
+#: application/views/helpers/Catalogpage.php:41
+msgid "По вашему запросу нет предложений"
+msgstr ""
+
+#: application/views/helpers/Usermenu.php:31
+#: application/views/helpers/Usermenu.php:46
+msgid "Login"
+msgstr "Вход"
+
+#: application/views/helpers/Usermenu.php:32
+msgid "Hello"
+msgstr "Здравствуйте"
+
+#: application/views/helpers/Usermenu.php:35
+msgid "My profile"
+msgstr "Мой профиль"
+
+#: application/views/helpers/Usermenu.php:36
+#: application/views/scripts/auth/logout.phtml:6
+#: application/views/scripts/castings/index.phtml:2
+msgid "Castings"
+msgstr "Кастинги"
+
+#: application/views/helpers/Usermenu.php:38
+msgid "Logout"
+msgstr "Выйти"
+
+#: application/views/helpers/Usermenu.php:47
+msgid "email"
+msgstr ""
+
+#: application/views/helpers/Usermenu.php:49
+msgid "password"
+msgstr ""
+
+#: application/views/helpers/Usermenu.php:52
+msgid "Forgot password"
+msgstr ""
+
+#: application/views/scripts/auth/logout.phtml:5
+msgid "News"
+msgstr "Новости"
+
+#: application/views/scripts/auth/logout.phtml:5
+#: application/views/scripts/registration/index.phtml:2
+msgid "Registration"
+msgstr "Регастрация"
+
+#: application/views/scripts/auth/logout.phtml:5
+#: application/views/scripts/discounts/index.phtml:2
+msgid "Discounts"
+msgstr ""
+
+#: application/views/scripts/auth/logout.phtml:5
+msgid "Catalog"
+msgstr ""
+
+#: application/views/scripts/auth/logout.phtml:6
+#: application/views/scripts/communications/index.phtml:2
+msgid "Communications"
+msgstr ""
+
+#: application/views/scripts/auth/logout.phtml:6
+#: application/views/scripts/pages/contacts.phtml:2
+msgid "Contacts"
+msgstr ""
+
+#: application/views/scripts/auth/logout.phtml:6
+#: application/views/scripts/pages/career.phtml:2
+msgid "Career"
+msgstr ""
+
+#: application/views/scripts/discounts/all.phtml:7
+#: application/views/scripts/discounts/category.phtml:7
+#: application/views/scripts/discounts/index.phtml:16
+msgid "Весь каталог компаний"
+msgstr ""
+
+#: application/views/scripts/discounts/all.phtml:9
+#: application/views/scripts/discounts/category.phtml:9
+#: application/views/scripts/discounts/index.phtml:13
+msgid "Каталог"
+msgstr ""
+
+#: application/views/scripts/discounts/all.phtml:11
+#: application/views/scripts/discounts/category.phtml:11
+msgid "далее"
+msgstr ""
+
+#: application/views/scripts/discounts/index.phtml:3
+msgid ""
+"Сегодня в агентстве ÉLEVÉ работают специалисты высокого класса,\n"
+"        обладающие знаниями и опытом в различных областях. Руководство\n"
+"        агентства уверенно, что основа успеха любого проекта — это\n"
+"        профессиональная команда. Именно по этой причине, когда мы\n"
+"        проводим оценку  кандидатов, мы, прежде всего, обращаем внимание\n"
+"        не на опыт работы и профильное образование, а потенциал для\n"
+"        дальнейшего развития."
+msgstr ""
+
+#: application/views/scripts/discounts/index.phtml:10
+msgid "Партнерам"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:9
+#: application/views/scripts/catalog/in.phtml:6
+msgid "Город"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:12
+msgid "Любой"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:13
+msgid "Минск"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:14
+msgid "Москва"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:19
+#: application/views/scripts/catalog/in.phtml:46
+#: application/views/scripts/registration/index.phtml:55
+msgid "Цели"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:22
+#: application/views/scripts/catalog/index.phtml:41
+msgid "Все"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:23
+#: application/views/scripts/profile/index.phtml:126
+msgid "Мастер-классы"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:24
+#: application/views/scripts/profile/index.phtml:130
+msgid "Промо-акции"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:25
+#: application/views/scripts/profile/index.phtml:134
+msgid "Съемки для катологов"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:26
+#: application/views/scripts/profile/index.phtml:138
+msgid "Съемки в киносериалах"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:27
+#: application/views/scripts/profile/index.phtml:142
+msgid "Съемки в рекламе"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:28
+msgid "Вокальные, танцевальные или другие проекты"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:29
+#: application/views/scripts/profile/index.phtml:155
+msgid "Fashion показы, defile"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:30
+#: application/views/scripts/profile/index.phtml:159
+msgid "Презентации и выставки"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:31
+#: application/views/scripts/profile/index.phtml:163
+msgid "Съемки для журналов"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:32
+#: application/views/scripts/profile/index.phtml:167
+msgid "Съемки в клипах"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:33
+#: application/views/scripts/profile/index.phtml:171
+msgid "Работа переводчиком"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:38
+msgid "Статус"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:42
+#: application/views/scripts/profile/index.phtml:183
+msgid "Профессиональный актер"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:43
+#: application/views/scripts/profile/index.phtml:187
+msgid "Начинающий актер"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:44
+#: application/views/scripts/profile/index.phtml:191
+msgid "Телеведущий, радиоведущий"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:45
+#: application/views/scripts/profile/index.phtml:195
+msgid "Артист эстрады"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:46
+#: application/views/scripts/profile/index.phtml:199
+msgid "Фотомодель, модель подиума"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:47
+#: application/views/scripts/profile/index.phtml:206
+msgid "Конферансье"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:48
+#: application/views/scripts/profile/index.phtml:210
+msgid "Каскадер"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:49
+#: application/views/scripts/profile/index.phtml:214
+msgid "Танцовщик / Танцовщица"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:50
+#: application/views/scripts/profile/index.phtml:218
+msgid "Начинающий"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:51
+#: application/views/scripts/profile/index.phtml:222
+msgid "Переводчик"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:58
+msgid "Возраст"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:61
+#: application/views/scripts/catalog/index.phtml:73
+#: application/views/scripts/catalog/index.phtml:84
+msgid "любой"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:70
+#: application/views/scripts/catalog/in.phtml:7
+msgid "Рост"
+msgstr ""
+
+#: application/views/scripts/catalog/index.phtml:92
+msgid "Поиск"
+msgstr ""
+
+#: application/views/scripts/catalog/in.phtml:9
+msgid "Объемы"
+msgstr ""
+
+#: application/views/scripts/catalog/in.phtml:11
+#: application/views/scripts/profile/index.phtml:77
+msgid "Размер обуви"
+msgstr ""
+
+#: application/views/scripts/catalog/in.phtml:38
+msgid ""
+"Опыт работы на выставках, презентациях, съемках и т.д. (наиболее\n"
+"            интересные проекты)"
+msgstr ""
+
+#: application/views/scripts/catalog/in.phtml:40
+#: application/views/scripts/profile/index.phtml:83
+msgid "Образование"
+msgstr ""
+
+#: application/views/scripts/catalog/in.phtml:42
+msgid "Знание иностранзыных яков"
+msgstr ""
+
+#: application/views/scripts/catalog/in.phtml:59
+msgid "Личные качества,  выделяющие вас"
+msgstr ""
+
+#: application/views/scripts/articles/index.phtml:13
+msgid "вернуться"
+msgstr ""
+
+#: application/views/scripts/registration/changepassword.phtml:2
+msgid "Change password"
+msgstr ""
+
+#: application/views/scripts/registration/changepassword.phtml:11
+msgid "Code from email"
+msgstr ""
+
+#: application/views/scripts/registration/changepassword.phtml:17
+msgid "Password"
+msgstr ""
+
+#: application/views/scripts/registration/changepassword.phtml:23
+msgid "Confirm password"
+msgstr ""
+
+#: application/views/scripts/registration/changepassword.phtml:27
+#: application/views/scripts/profile/index.phtml:353
+msgid "Сохранить"
+msgstr ""
+
+#: application/views/scripts/registration/forgotpass.phtml:2
+msgid "Forgot your password?"
+msgstr ""
+
+#: application/views/scripts/registration/forgotpass.phtml:6
+#: application/views/scripts/forgotpass/index.phtml:5
+msgid "Введите ваш email и мы вышлем вам новый пароль для входа в кабинет"
+msgstr ""
+
+#: application/views/scripts/registration/forgotpass.phtml:12
+#: application/views/scripts/registration/index.phtml:49
+#: application/views/scripts/profile/index.phtml:59
+msgid "Адрес e-mail"
+msgstr ""
+
+#: application/views/scripts/registration/forgotpass.phtml:16
+#: application/views/scripts/registration/index.phtml:91
+msgid "Отправить"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:5
+msgid ""
+"В нашем магазине Вы всегда сможете поднять себе настроение: яркая,\r\n"
+"                оригинальная и удобная одежда, в которой легко "
+"соответствовать любой\r\n"
+"                ситуации, представлена в Eleve круглый год. При этом "
+"обновление\r\n"
+"                ассортимента происходит постоянно, практически каждую неделю"
+"\r\n"
+"                в магазине."
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:13
+#: application/views/scripts/pages/contacts.phtml:22
+#: application/views/scripts/profile/index.phtml:23
+msgid "Представьтесь, пожалуйста"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:19
+#: application/views/scripts/profile/index.phtml:29
+msgid "Дата рождения"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:25
+#: application/views/scripts/profile/index.phtml:35
+msgid "Серия и номер паспорта"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:31
+#: application/views/scripts/profile/index.phtml:41
+msgid "Кем и когда выдан"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:37
+#: application/views/scripts/profile/index.phtml:47
+msgid "Фактическое место <br> жительства (адрес)"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:43
+#: application/views/scripts/profile/index.phtml:53
+msgid "Номер телефона"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:59
+msgid "публикация кастингов и поиск людей"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:60
+msgid "участие в кастинге и размещение анкеты"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:61
+msgid "размещение анкеты"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:62
+msgid "регистрация в дисконтном клубе"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:70
+msgid "Тип"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:74
+msgid "обычный"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:75
+msgid "gold"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:76
+msgid "premium"
+msgstr ""
+
+#: application/views/scripts/registration/index.phtml:88
+msgid ""
+"Да, я хочу получать новости и уведомления об акциях и закрытых\r\n"
+"                    рапсродажах для держателей дисконтной карты"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:5
+msgid "Номера телефонов"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:9
+#: application/views/scripts/pages/career.phtml:11
+msgid "Отдел управления персоналом"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:10
+msgid "Отдел рекламы и маркетинга"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:11
+msgid "Отдел по работе с партнерами"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:12
+msgid "Отдел по работе с клиентами"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:13
+msgid "Финансовый отдел"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:19
+msgid "Задать вопрос"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:28
+msgid "Контактный телефон"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:34
+msgid "Ваш e-mail"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:50
+msgid "Текст сообщения"
+msgstr ""
+
+#: application/views/scripts/pages/contacts.phtml:52
+msgid "Отправить вопрос"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:4
+msgid ""
+"Сегодня в агентстве ÉLEVÉ работают специалисты высокого класса,\r\n"
+"        обладающие знаниями и опытом в различных областях. Руководство\r\n"
+"        агентства уверенно, что основа успеха любого проекта — это\r\n"
+"        профессиональная команда. Именно по этой причине, когда мы\r\n"
+"        проводим оценку  кандидатов, мы, прежде всего, обращаем внимание\r\n"
+"        не на опыт работы и профильное образование, а потенциал для\r\n"
+"        дальнейшего развития."
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:15
+msgid "Актуальные вакансии"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:17
+msgid "Секретарь"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:19
+#: application/views/scripts/pages/career.phtml:45
+#: application/views/scripts/pages/career.phtml:71
+msgid "Обязанности"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:21
+#: application/views/scripts/pages/career.phtml:47
+#: application/views/scripts/pages/career.phtml:73
+msgid "Прием и распределение телефонных звонков"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:22
+#: application/views/scripts/pages/career.phtml:48
+#: application/views/scripts/pages/career.phtml:74
+msgid "Прием и отправка сообщений по каналам факсимильной связи"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:23
+#: application/views/scripts/pages/career.phtml:49
+#: application/views/scripts/pages/career.phtml:75
+msgid "Прием, отправка и распределение электронной почты"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:24
+#: application/views/scripts/pages/career.phtml:50
+#: application/views/scripts/pages/career.phtml:76
+msgid "Встреча посетителей"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:26
+#: application/views/scripts/pages/career.phtml:52
+#: application/views/scripts/pages/career.phtml:78
+msgid "Требования"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:28
+#: application/views/scripts/pages/career.phtml:54
+#: application/views/scripts/pages/career.phtml:80
+msgid "Опыт работы секретарем от 1 года"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:29
+#: application/views/scripts/pages/career.phtml:55
+#: application/views/scripts/pages/career.phtml:81
+msgid "Уверенный ПК – пользователь"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:30
+#: application/views/scripts/pages/career.phtml:56
+#: application/views/scripts/pages/career.phtml:82
+msgid "Хорошие коммуникативные навыки"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:31
+#: application/views/scripts/pages/career.phtml:57
+#: application/views/scripts/pages/career.phtml:83
+msgid "Стрессоустойчивость, способность работать с большим объемом информации"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:32
+#: application/views/scripts/pages/career.phtml:58
+#: application/views/scripts/pages/career.phtml:84
+msgid "Желание и умение учиться"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:34
+#: application/views/scripts/pages/career.phtml:60
+#: application/views/scripts/pages/career.phtml:86
+msgid "Условия"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:36
+#: application/views/scripts/pages/career.phtml:62
+#: application/views/scripts/pages/career.phtml:88
+msgid "Медицинская страховка после испытательного срока"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:37
+#: application/views/scripts/pages/career.phtml:63
+#: application/views/scripts/pages/career.phtml:89
+msgid "Отличные возможности профессионального и карьерного роста"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:38
+#: application/views/scripts/pages/career.phtml:64
+#: application/views/scripts/pages/career.phtml:90
+msgid "Высокая заработная плата"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:39
+#: application/views/scripts/pages/career.phtml:65
+#: application/views/scripts/pages/career.phtml:91
+msgid "График работы - полный рабочий день"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:43
+msgid "Менеджер проекта"
+msgstr ""
+
+#: application/views/scripts/pages/career.phtml:69
+msgid "Менеджер по работе с партнерами"
+msgstr ""
+
+#: application/views/scripts/pages/activation.phtml:1
+msgid "Текст с реквизитами для оплаты"
+msgstr ""
+
+#: application/views/scripts/forgotpass/index.phtml:4
+msgid "Забыли пароль?"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:2
+#, fuzzy
+msgid "Profile"
+msgstr "Мой профиль"
+
+#: application/views/scripts/profile/index.phtml:5
+msgid ""
+"В нашем магазине Вы всегда сможете поднять себе настроение: яркая,\r\n"
+"            оригинальная и удобная одежда, в которой легко соответствовать "
+"любой\r\n"
+"            ситуации, представлена в Eleve круглый год. При этом обновление"
+"\r\n"
+"            ассортимента происходит постоянно, практически каждую неделю\r\n"
+"            в магазине."
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:15
+msgid ""
+"Ваш аккаунт не активирован. Для отображения вашей анкеты в каталоге "
+"активируйте аккаунт!"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:16
+msgid "активация"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:65
+msgid "Рост (без каблуков)"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:71
+msgid "Объемы фигуры"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:90
+msgid "Знание иностранных языков"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:92
+msgid "Язык"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:96
+#: application/views/scripts/profile/index.phtml:110
+msgid "Уровень владения"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:99
+#: application/views/scripts/profile/index.phtml:113
+msgid "низкий"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:100
+#: application/views/scripts/profile/index.phtml:114
+msgid "средний"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:101
+#: application/views/scripts/profile/index.phtml:115
+msgid "высокий"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:106
+msgid "Язы"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:122
+msgid "Ваши цели"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:146
+msgid ""
+"Вокальные, танцевальные\r\n"
+"                            или другие проекты"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:177
+msgid "Профессиональный статус"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:229
+msgid ""
+"Опыт работы на выставках,\r\n"
+"                    презентациях, съемках и\r\n"
+"                    т.д. (укажите наиболее\r\n"
+"                    интересные проекты)"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:236
+msgid ""
+"Укажите в данном пункте\r\n"
+"                    ваш стиль танцев (для\r\n"
+"                    танцовщиц)"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:242
+msgid ""
+"Личные качества,\r\n"
+"                    выделяющие вас"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:247
+msgid "Фотографии"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:255
+msgid "Удалить"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:329
+msgid "добавить фото"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:333
+msgid "Изменить пароль"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:336
+msgid "Текущий пароль"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:342
+msgid "Новый пароль"
+msgstr ""
+
+#: application/views/scripts/profile/index.phtml:348
+msgid "Повторите пароль"
+msgstr ""
+
+#~ msgid "hello"
+#~ msgstr "Привет"

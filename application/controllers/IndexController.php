@@ -6,7 +6,8 @@ class IndexController extends Zend_Controller_Action
     private $user;
 
     public function init()
-    {   
+    {
+        $this->redirect('/news');
         $this->user = Zend_Registry::get('user');
     }
 

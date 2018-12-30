@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/eleve.by/webstat"
+AuthUserFile /var/www/eleve/data/etc/228542164.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>

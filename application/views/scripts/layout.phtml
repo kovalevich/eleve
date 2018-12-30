@@ -18,7 +18,7 @@
         <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => '/images/favicon.ico'))
                         ->prependStylesheet('/styles/print.css','print')
                         ->prependStylesheet('/styles/style.css')
-                        ->prependStylesheet('/styles/fancybox-1.3.4.css')
+                        ->prependStylesheet('/styles/jquery.fancybox-1.3.4.css')
                         ->prependStylesheet('/styles/style.css')
 
         ?>
@@ -27,6 +27,7 @@
         <?php echo $this->headScript()
             ->prependFile('/scripts/scripts.js')
             ->prependFile('/scripts/form.js')
+            ->prependFile('/scripts/jquery.preload.min.js')
             ->prependFile('/scripts/jquery.fancybox-1.3.4.pack.js')
             ->prependFile('/scripts/jquery-1.7.1.min.js')
 
@@ -42,7 +43,7 @@
 
 
     <section id="main">
-
+        <?= $this->bgs ?>
         <!--HEADER-->
         <header id="header">
             <div class="logo"><a href="/">ÉLEVÉ <br><span>Model management</span></a></div>
@@ -55,9 +56,8 @@
             </div>
 
             <ul class="lang">
-                <li><a href="#">En</a></li>
-                <li><a href="#">Fr</a></li>
-                <li><a href="#">Ru</a></li>
+                <li><a href="?lang=en">En</a></li>
+                <li><a href="?lang=ru">Ru</a></li>
             </ul>
 
             <?php echo $this->usermenu() ?>

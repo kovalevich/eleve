@@ -6,76 +6,93 @@
             <div class="form_separate_box">
                 <div class="form_separate_left">
                     <div class="form_separate_main">
-                        <label>Город:</label>
+                        <label><?= $this->translate(_('Город')) ?>:</label>
                         <div class="sell" style="width: 150px;">
                             <select class="styled" name="city">
-                                <option>Vilnus</option>
-                                <option>Vilnus2</option>
-                                <option>Vilnus3</option>
-                                <option>Vilnus4</option>
+                                <option value="0" <?= $this->city == 0 ? 'selected' : '' ?>><?= $this->translate(_('Любой')) ?></option>
+                                <option value="minsk" <?= $this->city == 'minsk' ? 'selected' : '' ?>><?= $this->translate(_('Минск')) ?></option>
+                                <option value="moskva"  <?= $this->city == 'moskva' ? 'selected' : '' ?>><?= $this->translate(_('Москва')) ?></option>
                             </select>
                         </div>
                     </div>
                     <div class="form_separate_main">
-                        <label>Цели:</label>
+                        <label><?= $this->translate(_('Цели')) ?>:</label>
                         <div class="sell" style="width: 150px;">
                             <select class="styled" name="targets">
-                                <option>Съемки в рекламе</option>
-                                <option>Съемки в рекламе1</option>
-                                <option>Съемки в рекламе2</option>
+                                <option value="0" <?= $this->target == 0 ? 'selected' : '' ?>><?= $this->translate(_('Все')) ?></option>
+                                <option value="1" <?= $this->target == 1 ? 'selected' : '' ?>><?= $this->translate(_('Мастер-классы')) ?></option>
+                                <option value="2" <?= $this->target == 2 ? 'selected' : '' ?>><?= $this->translate(_('Промо-акции')) ?></option>
+                                <option value="3" <?= $this->target == 3 ? 'selected' : '' ?>><?= $this->translate(_('Съемки для катологов')) ?></option>
+                                <option value="4" <?= $this->target == 4 ? 'selected' : '' ?>><?= $this->translate(_('Съемки в киносериалах')) ?></option>
+                                <option value="5" <?= $this->target == 5 ? 'selected' : '' ?>><?= $this->translate(_('Съемки в рекламе')) ?></option>
+                                <option value="6" <?= $this->target == 6 ? 'selected' : '' ?>><?= $this->translate(_('Вокальные, танцевальные или другие проекты')) ?></option>
+                                <option value="7" <?= $this->target == 7 ? 'selected' : '' ?>><?= $this->translate(_('Fashion показы, defile')) ?></option>
+                                <option value="8" <?= $this->target == 8 ? 'selected' : '' ?>><?= $this->translate(_('Презентации и выставки')) ?></option>
+                                <option value="9" <?= $this->target == 9 ? 'selected' : '' ?>><?= $this->translate(_('Съемки для журналов')) ?></option>
+                                <option value="10" <?= $this->target == 10 ? 'selected' : '' ?>><?= $this->translate(_('Съемки в клипах')) ?></option>
+                                <option value="11" <?= $this->target == 11 ? 'selected' : '' ?>><?= $this->translate(_('Работа переводчиком')) ?></option>
                             </select>
                         </div>
                     </div>
                     <div class="form_separate_main">
-                        <label>Статус:</label>
+                        <label><?= $this->translate(_('Статус')) ?>:</label>
                         <div class="sell" style="width: 150px;">
                             <select class="styled" name="status">
-                                <option>Фотодель подиума</option>
-                                <option>Фотодель подиума2</option>
-                                <option>Фотодель подиума3</option>
+                                <option value="0" <?= $this->status == 1 ? 'selected' : '' ?>><?= $this->translate(_('Все')) ?></option>
+                                <option value="1" <?= $this->status == 1 ? 'selected' : '' ?>><?= $this->translate(_('Профессиональный актер')) ?></option>
+                                <option value="2" <?= $this->status == 2 ? 'selected' : '' ?>><?= $this->translate(_('Начинающий актер')) ?></option>
+                                <option value="3" <?= $this->status == 3 ? 'selected' : '' ?>><?= $this->translate(_('Телеведущий, радиоведущий')) ?></option>
+                                <option value="4" <?= $this->status == 4 ? 'selected' : '' ?>><?= $this->translate(_('Артист эстрады')) ?></option>
+                                <option value="5" <?= $this->status == 5 ? 'selected' : '' ?>><?= $this->translate(_('Фотомодель, модель подиума')) ?></option>
+                                <option value="6" <?= $this->status == 6 ? 'selected' : '' ?>><?= $this->translate(_('Конферансье')) ?></option>
+                                <option value="7" <?= $this->status == 7 ? 'selected' : '' ?>><?= $this->translate(_('Каскадер')) ?></option>
+                                <option value="8" <?= $this->status == 8 ? 'selected' : '' ?>><?= $this->translate(_('Танцовщик / Танцовщица')) ?></option>
+                                <option value="9" <?= $this->status == 9 ? 'selected' : '' ?>><?= $this->translate(_('Начинающий')) ?></option>
+                                <option value="10" <?= $this->status == 10 ? 'selected' : '' ?>><?= $this->translate(_('Переводчик')) ?></option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="form_separate_right">
                     <div class="form_separate_main">
-                        <label>Возраст:</label>
+                        <label><?= $this->translate(_('Возраст')) ?>:</label>
                         <div class="sell">
-                            <select class="styled" name="brit">
-                                <option>23</option>
-                                <option>24</option>
-                                <option>25</option>
-                                <option>26</option>
+                            <select class="styled" name="b">
+                                <option value="0"  <?= $this->b == 0 ? 'selected' : '' ?>><?= $this->translate(_('любой')) ?></option>
+                                <option value="23" <?= $this->b == 23 ? 'selected' : '' ?>>23</option>
+                                <option value="24" <?= $this->b == 24 ? 'selected' : '' ?>>24</option>
+                                <option value="25" <?= $this->b == 25 ? 'selected' : '' ?>>25</option>
+                                <option value="26" <?= $this->b == 26 ? 'selected' : '' ?>>26</option>
                             </select>
                         </div>
                     </div>
                     <div class="form_separate_main">
-                        <label>Рост:</label>
+                        <label><?= $this->translate(_('Рост')) ?>:</label>
                         <div class="sell">
                             <select class="styled" name="growth">
-                                <option value="1">170-180</option>
-                                <option value="2">180-190</option>
-                                <option value="3">190-195</option>
+                                <option value="0" <?= $this->growth == 0 ? 'selected' : '' ?>><?= $this->translate(_('любой')) ?></option>
+                                <option value="1" <?= $this->growth == 1 ? 'selected' : '' ?>>170-180</option>
+                                <option value="2" <?= $this->growth == 2 ? 'selected' : '' ?>>180-190</option>
+                                <option value="3" <?= $this->growth == 3 ? 'selected' : '' ?>>190-195</option>
                             </select>
                         </div>
                     </div>
                     <div class="form_separate_main">
                         <label>Пол:</label>
                         <div class="sell">
-                            <select class="styled" name="male">
-                                <option value="woman">Женский</option>
-                                <option value="man">Мужской</option>
+                            <select class="styled" name="sex">
+                                <option value="0" <?= $this->sex == 0 ? 'selected' : '' ?>><?= $this->translate(_('любой')) ?></option>
+                                <option value="woman" <?= $this->sex == 'woman' ? 'selected' : '' ?>>Женский</option>
+                                <option value="man" <?= $this->sex == 'man' ? 'selected' : '' ?>>Мужской</option>
                             </select>
                         </div>
                     </div>
                 </div>
             </div>
-            <input class="btn_separate" type="submit" value="Поиск">
+            <input class="btn_separate" type="submit" value="<?= $this->translate(_('Поиск')) ?>">
         </div>
     </form>
 
-    <ul class="catalog_separate">
-        <?= $this->catalogpage($this->profiles)?>
-    </ul>
-
+    <?= $this->catalogpage($this->profiles)?>
+    <?= $this->page ?>
 </div>

@@ -72,9 +72,10 @@ class AuthController extends Zend_Controller_Action
 
                         // помещаем туда информацию о пользователе,
                         // чтобы иметь к ним доступ при конфигурировании Acl
-                        $authStorage->write($identity);
+                        $mapper = new Models_Users_Mapper();
+                        $authStorage->write($mapper->getUser($identity->id));
 
-                        $this->_redirect('profile');
+                        $this->redirect('/profile/' . $identity->id);
                     }
                     else {
                         $this->view->errMessage = 'Этот аккаунт заблокирован, или удален!';
