@@ -33,6 +33,7 @@ class IndexController extends Zend_Controller_Action
         
         $usermenu = '';
         if ($this->user) {
+           
             $usermenu .= 
                 '<li><a href="' . $this->view->url(array('controller'=>'room')) . '">' . $this->view->translate('room') . '</a></li>';
             if ($this->user->role == 'admin' || $this->user->role == 'manager')

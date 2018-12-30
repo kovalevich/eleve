@@ -75,8 +75,8 @@ class Models_Users_Mapper extends Models_Mapper
             ->join(array('casting'=>'castings'), 'casting.id = subscribe.casting_id', array(
                 'casting_title'=>'title'
             ))
-            ->where('subscribe.user_id = ?', $id)
-            ->group('subscribe.casting_id');
+            ->where('subscribe.user_id = ?', $id);
+            //->group('subscribe.casting_id');
 
         $resultSet = $this->_db->fetchAll($select);
         $arr = array();

@@ -114,7 +114,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     protected function _initPlugins()
     {
         //$this->_frontController->registerPlugin(new Application_Plugin_Cache());
-        //$this->_frontController->registerPlugin(new Application_Plugin_CheckLogin());
+        $this->_frontController->registerPlugin(new Application_Plugin_CheckLogin());
         //$this->_frontController->registerPlugin(new Application_Plugin_PreviousPage(Zend_Auth::getInstance()));
     }
     

@@ -46,7 +46,7 @@ class Models_Categories_Mapper extends Models_Mapper
         return $categories;
     }
 
-    public function convertRow($row)
+    public function convertRow($row = null)
     {
         $entry = parent::convertRow($row);
         if (!$entry) return null;

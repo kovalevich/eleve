@@ -73,7 +73,7 @@ class Models_Communications_Mapper extends Models_Mapper
     }
     
     
-    public function convertRow($row)
+    public function convertRow($row = null)
     {
     	$entry = parent::convertRow($row);
         if (!$entry) return null;

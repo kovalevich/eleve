@@ -33,8 +33,8 @@ class RegistrationController extends Zend_Controller_Action
     		    $user->role = $this->getParam('role', 'user');
     		    $user->save();
 
-       		    $mail = new Classes_MailManager();
-                $mail->sentTemplateMail($user->email, $this->view->translate('Password'), 'password', $pass);
+       		    //$mail = new Classes_MailManager();
+                //$mail->sentTemplateMail($user->email, $this->view->translate('Password'), 'password', $pass);
     		    
     		    
     		    $this->_request->setPost(array(

@@ -81,7 +81,7 @@ class Models_Articles_Mapper extends Models_Mapper
         return $paginator;
     }
 
-    public function convertRow($row)
+    public function convertRow($row = null)
     {
     	$entry = parent::convertRow($row);
         if (!$entry) return null;

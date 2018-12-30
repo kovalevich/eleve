@@ -94,7 +94,7 @@ class Models_Images_Mapper extends Models_Mapper
     }
 
     
-    public function convertRow($row, $is_files = false)
+    public function convertRow($row = null, $is_files = false)
     {
     	$entry = parent::convertRow($row);
     	return $entry;
